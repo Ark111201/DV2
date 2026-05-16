@@ -1,0 +1,76 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Malaysia District-wise Hospital Beds (2022)",
+  "width": 1000,
+  "height": 600,
+  "projection": {
+    "type": "mercator",
+    "center": [109.5, 4.2],
+    "scale": 3000
+  },
+  "layer": [
+    {
+      "comment": "背景：データがない地域をグレーで表示",
+      "data": {
+        "url": "https://raw.githubusercontent.com/Ark111201/DV2/refs/heads/main/maps/malaysia-districts.json",
+        "format": {"type": "topojson", "feature": "gadm41_MYS_2"}
+      },
+      "mark": {"type": "geoshape", "fill": "#dddddd", "stroke": "white"},
+      "encoding": {
+        "tooltip": {"field": "properties.NAME_2", "type": "nominal", "title": "District (No Data)"}
+      }
+    },
+    {
+      "comment": "データレイヤー：ベッド数に応じて色を塗る",
+      "data": {
+        "url": "https://raw.githubusercontent.com/Ark111201/DV2/refs/heads/main/maps/malaysia-districts.json",
+        "format": {"type": "topojson", "feature": "gadm41_MYS_2"}
+      },
+      "transform": [
+        {
+          "calculate": "datum.properties.NAME_2 == 'Johor Baharu' ? 'Johor Bahru' : datum.properties.NAME_2 == 'Keluang' ? 'Kluang' : datum.properties.NAME_2 == 'Kuala Lumpur' ? 'W.P. Kuala Lumpur' : datum.properties.NAME_2 == 'Labuan' ? 'W.P. Labuan' : datum.properties.NAME_2 == 'Putrajaya' ? 'W.P. Putrajaya' : datum.properties.NAME_2 == 'Kuala Penyu' ? 'Kota Penyu' : datum.properties.NAME_2 == 'Pasir Putih' ? 'Pasir Puteh' : datum.properties.NAME_2 == 'Batang Padang' ? 'Batang Padang (Tapah)' : datum.properties.NAME_2 == 'Gombak' ? 'Gombak (Rawang)' : datum.properties.NAME_2 == 'Hulu Langat' ? 'Hulu Langat (Bangi)' : datum.properties.NAME_2 == 'Kinta' ? 'Kinta (Ipoh)' : datum.properties.NAME_2 == 'Larut and Matang' ? 'Larut & Matang (Taiping)' : datum.properties.NAME_2 == 'Manjung' ? 'Manjung (Sitiawan)' : datum.properties.NAME_2 == 'Petaling' ? 'Petaling (Subang Jaya)' : datum.properties.NAME_2 == 'Seberang Perai Utara' ? 'Seberang Perai Utara (Butterworth)' : datum.properties.NAME_2 == 'Timur Laut' ? 'Timur Laut (Georgetown)' : datum.properties.NAME_2 == 'Tongod' ? 'Tongad' : datum.properties.NAME_2",
+          "as": "normalized_district"
+        },
+        {
+          "lookup": "normalized_district",
+          "from": {
+            "data": {
+              "url": "https://raw.githubusercontent.com/Ark111201/DV2/refs/heads/main/data/hospital_beds_2022_district.csv"
+            },
+            "key": "district",
+            "fields": ["beds", "state"]
+          }
+        },
+        {"filter": "datum.beds != null"}
+      ],
+      "params": [
+        {
+          "name": "state_highlight",
+          "select": {"type": "point", "fields": ["state"]}
+        }
+      ],
+      "mark": {"type": "geoshape", "stroke": "white"},
+      "encoding": {
+        "color": {
+          "field": "beds",
+          "type": "quantitative",
+          "title": "Beds Count",
+          "scale": {
+          "type": "threshold",
+          "domain": [1, 100, 500, 1000, 2000],
+          "range": ["#f7fbff", "#deebf7", "#9ecae1", "#4292c6", "#08519c", "#08306b"]
+  }
+        },
+        "opacity": {
+          "condition": {"param": "state_highlight", "value": 1},
+          "value": 0.2
+        },
+        "tooltip": [
+          {"field": "state", "type": "nominal", "title": "State"},
+          {"field": "normalized_district", "type": "nominal", "title": "District"},
+          {"field": "beds", "type": "quantitative", "title": "Total Beds"}
+        ]
+      }
+    }
+  ]
+}

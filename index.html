@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Malaysia Healthcare Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+    <style>
+        body { font-family: sans-serif; background-color: #f4f4f9; }
+        #vis { width: 100%; margin: auto; }
+    </style>
+</head>
+<body>
+    <h1>DV2 Dashboard</h1>
+    <div id="vis"></div>
+
+    <script type="text/javascript">
+        var spec = "js/map.vg.json";
+        vegaEmbed('#vis', spec).then(function(result) {
+            // アクセス成功時の処理（必要に応じて）
+        }).catch(console.error);
+    </script>
+</body>
+</html>
