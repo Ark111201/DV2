@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Malaysia District-wise Hospital Beds (2022)",
+  "title": "Hospital Bed Availability per 10,000 People in Malaysia (2022)",
   "width": 1000,
   "height": 600,
   "projection": {
@@ -10,9 +10,9 @@
   },
   "layer": [
     {
-      "comment": "背景：データがない地域をグレーで表示",
+      "comment": "Step 1: Background. Gray color for districts with no data.",
       "data": {
-        "url": "https://raw.githubusercontent.com/Ark111201/DV2/refs/heads/main/maps/malaysia-districts.json",
+        "url": "https://raw.githubusercontent.com/Ark111201/DV2/heads/main/maps/malaysia-districts.json",
         "format": {"type": "topojson", "feature": "gadm41_MYS_2"}
       },
       "mark": {"type": "geoshape", "fill": "#dddddd", "stroke": "white"},
@@ -21,25 +21,49 @@
       }
     },
     {
-      "comment": "データレイヤー：ベッド数に応じて色を塗る",
+      "comment": "Step 2: Main Data Layer.",
       "data": {
-        "url": "https://raw.githubusercontent.com/Ark111201/DV2/refs/heads/main/maps/malaysia-districts.json",
+        "url": "https://raw.githubusercontent.com/Ark111201/DV2/heads/main/maps/malaysia-districts.json",
         "format": {"type": "topojson", "feature": "gadm41_MYS_2"}
       },
       "transform": [
         {
+          "comment": "Step 3: Map TopoJSON to Hospital data.",
           "calculate": "datum.properties.NAME_2 == 'Johor Baharu' ? 'Johor Bahru' : datum.properties.NAME_2 == 'Keluang' ? 'Kluang' : datum.properties.NAME_2 == 'Kuala Lumpur' ? 'W.P. Kuala Lumpur' : datum.properties.NAME_2 == 'Labuan' ? 'W.P. Labuan' : datum.properties.NAME_2 == 'Putrajaya' ? 'W.P. Putrajaya' : datum.properties.NAME_2 == 'Kuala Penyu' ? 'Kota Penyu' : datum.properties.NAME_2 == 'Pasir Putih' ? 'Pasir Puteh' : datum.properties.NAME_2 == 'Batang Padang' ? 'Batang Padang (Tapah)' : datum.properties.NAME_2 == 'Gombak' ? 'Gombak (Rawang)' : datum.properties.NAME_2 == 'Hulu Langat' ? 'Hulu Langat (Bangi)' : datum.properties.NAME_2 == 'Kinta' ? 'Kinta (Ipoh)' : datum.properties.NAME_2 == 'Larut and Matang' ? 'Larut & Matang (Taiping)' : datum.properties.NAME_2 == 'Manjung' ? 'Manjung (Sitiawan)' : datum.properties.NAME_2 == 'Petaling' ? 'Petaling (Subang Jaya)' : datum.properties.NAME_2 == 'Seberang Perai Utara' ? 'Seberang Perai Utara (Butterworth)' : datum.properties.NAME_2 == 'Timur Laut' ? 'Timur Laut (Georgetown)' : datum.properties.NAME_2 == 'Tongod' ? 'Tongad' : datum.properties.NAME_2",
           "as": "normalized_district"
         },
         {
+          "comment": "Step 4: Join Hospital data.",
           "lookup": "normalized_district",
           "from": {
-            "data": {
-              "url": "https://raw.githubusercontent.com/Ark111201/DV2/refs/heads/main/data/hospital_beds_2022_district.csv"
-            },
+            "data": { "url": "https://raw.githubusercontent.com/Ark111201/DV2/refs/heads/main/data/hospital_beds_2022_district.csv" },
             "key": "district",
             "fields": ["beds", "state"]
           }
+        },
+        {
+          "comment": "Step 5: Map Hospital to Population data.",
+          "calculate": "datum.normalized_district == 'Ledang' ? 'Tangkak' : datum.normalized_district == 'Kulaijaya' ? 'Kulai' : datum.normalized_district == 'Meradong' ? 'Maradong' : datum.normalized_district == 'Tongad' ? 'Tongod' : datum.normalized_district == 'Kota Penyu' ? 'Kuala Penyu' : datum.normalized_district == 'Hulu Langat (Bangi)' ? 'Ulu Langat' : datum.normalized_district == 'Hulu Selangor' ? 'Ulu Selangor' : datum.normalized_district == 'Batang Padang (Tapah)' ? 'Batang Padang' : datum.normalized_district == 'Gombak (Rawang)' ? 'Gombak' : datum.normalized_district == 'Kinta (Ipoh)' ? 'Kinta' : datum.normalized_district == 'Manjung (Sitiawan)' ? 'Manjung' : datum.normalized_district == 'Petaling (Subang Jaya)' ? 'Petaling' : datum.normalized_district == 'Seberang Perai Utara (Butterworth)' ? 'Seberang Perai Utara' : datum.normalized_district == 'Timur Laut (Georgetown)' ? 'Timur Laut' : datum.normalized_district == 'Larut & Matang (Taiping)' ? 'Larut Dan Matang' : datum.normalized_district",
+          "as": "pop_lookup_name"
+        },
+        {
+          "comment": "Step 6: Join Population data.",
+          "lookup": "pop_lookup_name",
+          "from": {
+            "data": { "url": "https://raw.githubusercontent.com/Ark111201/DV2/refs/heads/main/data/population_2022_district.csv" },
+            "key": "district",
+            "fields": ["population"]
+          }
+        },
+        {
+          "comment": "Step 7: Fix NaN issues by using default 0.",
+          "calculate": "datum.population != null ? datum.population * 1000 : 0",
+          "as": "total_population"
+        },
+        {
+          "comment": "Step 8: Calculate beds per 10k. If pop is 0, result is 0.",
+          "calculate": "datum.beds != null && datum.population > 0 ? (datum.beds / datum.population) * 10 : 0",
+          "as": "beds_per_10k"
         },
         {"filter": "datum.beds != null"}
       ],
@@ -51,15 +75,31 @@
       ],
       "mark": {"type": "geoshape", "stroke": "white"},
       "encoding": {
-        "color": {
-          "field": "beds",
+       "color": {
+          "field": "beds_per_10k",
           "type": "quantitative",
-          "title": "Beds Count",
+          "title": "Beds per 10k People",
           "scale": {
-          "type": "threshold",
-          "domain": [1, 100, 500, 1000, 2000],
-          "range": ["#f7fbff", "#deebf7", "#9ecae1", "#4292c6", "#08519c", "#08306b"]
-  }
+            "type": "threshold",
+            "domain": [0.1, 5, 10, 20, 30, 40],
+            "range": [
+              "#b7282d", 
+              "#deebf7", 
+              "#9ecae1", 
+              "#4292c6", 
+              "#2171b5", 
+              "#084594", 
+              "#08306b"
+            ]
+          },
+          "legend": {
+            "title": "Beds / 10k People",
+            "values": [0, 0.1, 5, 10, 20, 30, 40],
+            "labelExpr": "datum.value == 0 ? 'No Hospital' : datum.value == 0.1 ? '0.1' : datum.value",
+            "format": ".1f",
+            "orient": "right",
+            "offset": 10
+          }
         },
         "opacity": {
           "condition": {"param": "state_highlight", "value": 1},
@@ -68,9 +108,11 @@
         "tooltip": [
           {"field": "state", "type": "nominal", "title": "State"},
           {"field": "normalized_district", "type": "nominal", "title": "District"},
-          {"field": "beds", "type": "quantitative", "title": "Total Beds"}
+          {"field": "beds", "type": "quantitative", "title": "Total Beds", "format": ",d"},
+          {"field": "total_population", "type": "quantitative", "title": "Total Population", "format": ",d"},
+          {"field": "beds_per_10k", "type": "quantitative", "title": "Beds per 10,000 People", "format": ".2f"}
         ]
       }
     }
   ]
-}
+}       
