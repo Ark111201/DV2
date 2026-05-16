@@ -1,0 +1,154 @@
+date,state,district,type,beds
+1/1/2022,Johor,Batu Pahat,all,610
+1/1/2022,Johor,Johor Bahru,all,3042
+1/1/2022,Johor,Kluang,all,382
+1/1/2022,Johor,Kota Tinggi,all,158
+1/1/2022,Johor,Kulaijaya,all,93
+1/1/2022,Johor,Ledang,all,69
+1/1/2022,Johor,Mersing,all,70
+1/1/2022,Johor,Muar,all,575
+1/1/2022,Johor,Pontian,all,120
+1/1/2022,Johor,Segamat,all,314
+1/1/2022,Kedah,Baling,all,115
+1/1/2022,Kedah,Bandar Baharu,all,0
+1/1/2022,Kedah,Kota Setar,all,1108
+1/1/2022,Kedah,Kuala Muda,all,703
+1/1/2022,Kedah,Kubang Pasu,all,91
+1/1/2022,Kedah,Kulim,all,320
+1/1/2022,Kedah,Langkawi,all,163
+1/1/2022,Kedah,Padang Terap,all,80
+1/1/2022,Kedah,Pendang,all,0
+1/1/2022,Kedah,Pokok Sena,all,0
+1/1/2022,Kedah,Sik,all,93
+1/1/2022,Kedah,Yan,all,89
+1/1/2022,Kelantan,Bachok,all,0
+1/1/2022,Kelantan,Gua Musang,all,90
+1/1/2022,Kelantan,Jeli,all,80
+1/1/2022,Kelantan,Kota Bharu,all,1811
+1/1/2022,Kelantan,Kuala Krai,all,424
+1/1/2022,Kelantan,Machang,all,90
+1/1/2022,Kelantan,Pasir Mas,all,120
+1/1/2022,Kelantan,Pasir Puteh,all,90
+1/1/2022,Kelantan,Tanah Merah,all,146
+1/1/2022,Kelantan,Tumpat,all,119
+1/1/2022,Melaka,Alor Gajah,all,106
+1/1/2022,Melaka,Jasin,all,103
+1/1/2022,Melaka,Melaka Tengah,all,1245
+1/1/2022,Negeri Sembilan,Jelebu,all,76
+1/1/2022,Negeri Sembilan,Jempol,all,108
+1/1/2022,Negeri Sembilan,Kuala Pilah,all,314
+1/1/2022,Negeri Sembilan,Port Dickson,all,116
+1/1/2022,Negeri Sembilan,Rembau,all,76
+1/1/2022,Negeri Sembilan,Seremban,all,1143
+1/1/2022,Negeri Sembilan,Tampin,all,144
+1/1/2022,Pahang,Bentong,all,152
+1/1/2022,Pahang,Bera,all,40
+1/1/2022,Pahang,Cameron Highlands,all,40
+1/1/2022,Pahang,Jerantut,all,77
+1/1/2022,Pahang,Kuantan,all,1176
+1/1/2022,Pahang,Lipis,all,168
+1/1/2022,Pahang,Maran,all,70
+1/1/2022,Pahang,Pekan,all,110
+1/1/2022,Pahang,Raub,all,89
+1/1/2022,Pahang,Rompin,all,109
+1/1/2022,Pahang,Temerloh,all,650
+1/1/2022,Perak,Batang Padang (Tapah),all,350
+1/1/2022,Perak,Hilir Perak,all,548
+1/1/2022,Perak,Hulu Perak,all,75
+1/1/2022,Perak,Kampar,all,68
+1/1/2022,Perak,Kerian,all,100
+1/1/2022,Perak,Kinta (Ipoh),all,3354
+1/1/2022,Perak,Kuala Kangsar,all,229
+1/1/2022,Perak,Larut & Matang (Taiping),all,698
+1/1/2022,Perak,Manjung (Sitiawan),all,415
+1/1/2022,Perak,Perak Tengah,all,50
+1/1/2022,Perlis,Perlis,all,508
+1/1/2022,Pulau Pinang,Barat Daya,all,81
+1/1/2022,Pulau Pinang,Seberang Perai Selatan,all,105
+1/1/2022,Pulau Pinang,Seberang Perai Tengah,all,655
+1/1/2022,Pulau Pinang,Seberang Perai Utara (Butterworth),all,134
+1/1/2022,Pulau Pinang,Timur Laut (Georgetown),all,1163
+1/1/2022,Sabah,Beaufort,all,275
+1/1/2022,Sabah,Beluran,all,52
+1/1/2022,Sabah,Keningau,all,216
+1/1/2022,Sabah,Kinabatangan,all,68
+1/1/2022,Sabah,Kota Belud,all,172
+1/1/2022,Sabah,Kota Kinabalu,all,2175
+1/1/2022,Sabah,Kota Marudu,all,97
+1/1/2022,Sabah,Kota Penyu,all,48
+1/1/2022,Sabah,Kudat,all,180
+1/1/2022,Sabah,Kunak,all,48
+1/1/2022,Sabah,Lahad Datu,all,268
+1/1/2022,Sabah,Nabawan,all,0
+1/1/2022,Sabah,Papar,all,77
+1/1/2022,Sabah,Penampang,all,0
+1/1/2022,Sabah,Pitas,all,72
+1/1/2022,Sabah,Putatan,all,0
+1/1/2022,Sabah,Ranau,all,110
+1/1/2022,Sabah,Sandakan,all,400
+1/1/2022,Sabah,Semporna,all,70
+1/1/2022,Sabah,Sipitang,all,93
+1/1/2022,Sabah,Tambunan,all,49
+1/1/2022,Sabah,Tawau,all,431
+1/1/2022,Sabah,Telupid,all,0
+1/1/2022,Sabah,Tenom,all,70
+1/1/2022,Sabah,Tongad,all,0
+1/1/2022,Sabah,Tuaran,all,82
+1/1/2022,Sarawak,Asajaya,all,0
+1/1/2022,Sarawak,Bau,all,68
+1/1/2022,Sarawak,Belaga,all,0
+1/1/2022,Sarawak,Beluru,all,0
+1/1/2022,Sarawak,Betong,all,48
+1/1/2022,Sarawak,Bintulu,all,302
+1/1/2022,Sarawak,Bukit Mabong,all,0
+1/1/2022,Sarawak,Dalat,all,8
+1/1/2022,Sarawak,Daro,all,46
+1/1/2022,Sarawak,Julau,all,0
+1/1/2022,Sarawak,Kabong,all,0
+1/1/2022,Sarawak,Kanowit,all,100
+1/1/2022,Sarawak,Kapit,all,134
+1/1/2022,Sarawak,Kuching,all,1412
+1/1/2022,Sarawak,Lawas,all,46
+1/1/2022,Sarawak,Limbang,all,100
+1/1/2022,Sarawak,Lubok Antu,all,0
+1/1/2022,Sarawak,Lundu,all,46
+1/1/2022,Sarawak,Marudi,all,54
+1/1/2022,Sarawak,Matu,all,0
+1/1/2022,Sarawak,Meradong,all,0
+1/1/2022,Sarawak,Miri,all,349
+1/1/2022,Sarawak,Mukah,all,80
+1/1/2022,Sarawak,Pakan,all,0
+1/1/2022,Sarawak,Pusa,all,0
+1/1/2022,Sarawak,Samarahan,all,128
+1/1/2022,Sarawak,Saratok,all,106
+1/1/2022,Sarawak,Sarikei,all,212
+1/1/2022,Sarawak,Sebauh,all,0
+1/1/2022,Sarawak,Selangau,all,0
+1/1/2022,Sarawak,Serian,all,84
+1/1/2022,Sarawak,Sibu,all,662
+1/1/2022,Sarawak,Simunjan,all,42
+1/1/2022,Sarawak,Song,all,0
+1/1/2022,Sarawak,Sri Aman,all,92
+1/1/2022,Sarawak,Subis,all,0
+1/1/2022,Sarawak,Tanjung Manis,all,0
+1/1/2022,Sarawak,Tatau,all,0
+1/1/2022,Sarawak,Tebedu,all,0
+1/1/2022,Selangor,Gombak (Rawang),all,3153
+1/1/2022,Selangor,Hulu Langat (Bangi),all,1087
+1/1/2022,Selangor,Hulu Selangor,all,120
+1/1/2022,Selangor,Klang,all,1261
+1/1/2022,Selangor,Kuala Langat,all,196
+1/1/2022,Selangor,Kuala Selangor,all,114
+1/1/2022,Selangor,Petaling (Subang Jaya),all,490
+1/1/2022,Selangor,Sabak Bernam,all,93
+1/1/2022,Selangor,Sepang,all,1126
+1/1/2022,Terengganu,Besut,all,140
+1/1/2022,Terengganu,Dungun,all,100
+1/1/2022,Terengganu,Hulu Terengganu,all,95
+1/1/2022,Terengganu,Kemaman,all,164
+1/1/2022,Terengganu,Kuala Terengganu,all,1155
+1/1/2022,Terengganu,Marang,all,0
+1/1/2022,Terengganu,Setiu,all,76
+1/1/2022,W.P. Kuala Lumpur,W.P. Kuala Lumpur,all,4874
+1/1/2022,W.P. Labuan,W.P. Labuan,all,122
+1/1/2022,W.P. Putrajaya,W.P. Putrajaya,all,637
