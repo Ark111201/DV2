@@ -1,0 +1,162 @@
+state,district,date,income_mean,income_median
+Johor,Batu Pahat,1/1/2022,7419,6347
+Johor,Johor Bahru,1/1/2022,9869,8232
+Johor,Kluang,1/1/2022,6461,5204
+Johor,Kota Tinggi,1/1/2022,7529,6227
+Johor,Kulai,1/1/2022,9177,7460
+Johor,Mersing,1/1/2022,5426,4445
+Johor,Muar,1/1/2022,7572,5724
+Johor,Pontian,1/1/2022,6913,5616
+Johor,Segamat,1/1/2022,6578,5318
+Johor,Tangkak,1/1/2022,7093,5622
+Kedah,Baling,1/1/2022,4263,3400
+Kedah,Bandar Baharu,1/1/2022,4565,3922
+Kedah,Kota Setar,1/1/2022,5959,4751
+Kedah,Kuala Muda,1/1/2022,5624,4200
+Kedah,Kubang Pasu,1/1/2022,6221,5201
+Kedah,Kulim,1/1/2022,5636,4498
+Kedah,Langkawi,1/1/2022,6087,5250
+Kedah,Padang Terap,1/1/2022,4858,3902
+Kedah,Pendang,1/1/2022,4986,3801
+Kedah,Pokok Sena,1/1/2022,5494,4668
+Kedah,Sik,1/1/2022,5053,3703
+Kedah,Yan,1/1/2022,4637,4080
+Kelantan,Bachok,1/1/2022,4811,3625
+Kelantan,Gua Musang,1/1/2022,4473,3342
+Kelantan,Jeli,1/1/2022,3735,2906
+Kelantan,Kecil Lojing,1/1/2022,3153,2630
+Kelantan,Kota Bharu,1/1/2022,5693,4330
+Kelantan,Kuala Krai,1/1/2022,3798,2763
+Kelantan,Machang,1/1/2022,4987,3429
+Kelantan,Pasir Mas,1/1/2022,4602,3508
+Kelantan,Pasir Puteh,1/1/2022,4712,3453
+Kelantan,Tanah Merah,1/1/2022,4177,2991
+Kelantan,Tumpat,1/1/2022,4741,3749
+Melaka,Alor Gajah,1/1/2022,7235,5611
+Melaka,Jasin,1/1/2022,7145,5895
+Melaka,Melaka Tengah,1/1/2022,8593,6557
+Negeri Sembilan,Jelebu,1/1/2022,4445,3636
+Negeri Sembilan,Jempol,1/1/2022,4848,3830
+Negeri Sembilan,Kuala Pilah,1/1/2022,4509,3471
+Negeri Sembilan,Port Dickson,1/1/2022,6054,4805
+Negeri Sembilan,Rembau,1/1/2022,5544,4655
+Negeri Sembilan,Seremban,1/1/2022,7900,6384
+Negeri Sembilan,Tampin,1/1/2022,5097,4012
+Pahang,Bentong,1/1/2022,5563,4691
+Pahang,Bera,1/1/2022,4567,3866
+Pahang,Cameron Highlands,1/1/2022,6265,5221
+Pahang,Jerantut,1/1/2022,4537,3781
+Pahang,Kuantan,1/1/2022,6938,5926
+Pahang,Lipis,1/1/2022,4959,4115
+Pahang,Maran,1/1/2022,5036,4319
+Pahang,Pekan,1/1/2022,4780,4053
+Pahang,Raub,1/1/2022,5445,4375
+Pahang,Rompin,1/1/2022,5103,4148
+Pahang,Temerloh,1/1/2022,5180,4283
+Perak,Bagan Datuk,1/1/2022,5160,4076
+Perak,Batang Padang,1/1/2022,5178,3953
+Perak,Hilir Perak,1/1/2022,5203,4199
+Perak,Hulu Perak,1/1/2022,4891,3467
+Perak,Kampar,1/1/2022,5087,4347
+Perak,Kerian,1/1/2022,5276,3996
+Perak,Kinta,1/1/2022,6308,5037
+Perak,Kuala Kangsar,1/1/2022,5176,3813
+Perak,Larut dan Matang,1/1/2022,5400,4029
+Perak,Manjung,1/1/2022,6318,5135
+Perak,Muallim,1/1/2022,6122,5015
+Perak,Perak Tengah,1/1/2022,5956,4564
+Perak,Selama,1/1/2022,4439,3673
+Perlis,Perlis,1/1/2022,5664,4713
+Pulau Pinang,Barat Daya,1/1/2022,9254,7247
+Pulau Pinang,Seberang Perai Selatan,1/1/2022,7472,6231
+Pulau Pinang,Seberang Perai Tengah,1/1/2022,8056,6220
+Pulau Pinang,Seberang Perai Utara,1/1/2022,7330,6103
+Pulau Pinang,Timur Laut,1/1/2022,8727,6714
+Sabah,Beaufort,1/1/2022,4902,4018
+Sabah,Beluran,1/1/2022,4501,3131
+Sabah,Kalabakan,1/1/2022,4938,3931
+Sabah,Keningau,1/1/2022,5979,4502
+Sabah,Kinabatangan,1/1/2022,5543,4162
+Sabah,Kota Belud,1/1/2022,4949,3429
+Sabah,Kota Kinabalu,1/1/2022,8388,5957
+Sabah,Kota Marudu,1/1/2022,4031,2677
+Sabah,Kuala Penyu,1/1/2022,4311,3487
+Sabah,Kudat,1/1/2022,4049,2994
+Sabah,Kunak,1/1/2022,5838,4480
+Sabah,Lahad Datu,1/1/2022,5995,4457
+Sabah,Nabawan,1/1/2022,5016,4110
+Sabah,Papar,1/1/2022,5980,4871
+Sabah,Penampang,1/1/2022,7491,6265
+Sabah,Pitas,1/1/2022,3406,2329
+Sabah,Putatan,1/1/2022,7110,5699
+Sabah,Ranau,1/1/2022,5270,4058
+Sabah,Sandakan,1/1/2022,6030,4828
+Sabah,Semporna,1/1/2022,5098,4093
+Sabah,Sipitang,1/1/2022,5479,4182
+Sabah,Tambunan,1/1/2022,5113,4055
+Sabah,Tawau,1/1/2022,6315,4783
+Sabah,Telupid,1/1/2022,4819,3953
+Sabah,Tenom,1/1/2022,5217,4045
+Sabah,Tongod,1/1/2022,4019,2856
+Sabah,Tuaran,1/1/2022,5166,3921
+Sarawak,Asajaya,1/1/2022,4557,3929
+Sarawak,Bau,1/1/2022,5621,4735
+Sarawak,Belaga,1/1/2022,4239,3587
+Sarawak,Beluru,1/1/2022,4873,4164
+Sarawak,Betong,1/1/2022,4422,3685
+Sarawak,Bintulu,1/1/2022,9645,8567
+Sarawak,Bukit Mabong,1/1/2022,3509,2948
+Sarawak,Dalat,1/1/2022,4841,4057
+Sarawak,Daro,1/1/2022,4368,3373
+Sarawak,Julau,1/1/2022,3548,2652
+Sarawak,Kabong,1/1/2022,4002,3500
+Sarawak,Kanowit,1/1/2022,3711,2648
+Sarawak,Kapit,1/1/2022,4053,2902
+Sarawak,Kuching,1/1/2022,7588,5968
+Sarawak,Lawas,1/1/2022,4476,3183
+Sarawak,Limbang,1/1/2022,5148,4023
+Sarawak,Lubok Antu,1/1/2022,4129,3548
+Sarawak,Lundu,1/1/2022,4935,3692
+Sarawak,Maradong,1/1/2022,4117,3259
+Sarawak,Marudi,1/1/2022,5373,4234
+Sarawak,Matu,1/1/2022,4362,3354
+Sarawak,Miri,1/1/2022,7932,6449
+Sarawak,Mukah,1/1/2022,5962,4623
+Sarawak,Pakan,1/1/2022,3936,3546
+Sarawak,Pusa,1/1/2022,3395,3124
+Sarawak,Samarahan,1/1/2022,7123,5953
+Sarawak,Saratok,1/1/2022,4621,3763
+Sarawak,Sarikei,1/1/2022,5440,3528
+Sarawak,Sebauh,1/1/2022,5120,4428
+Sarawak,Selangau,1/1/2022,4128,3005
+Sarawak,Serian,1/1/2022,4988,4074
+Sarawak,Sibu,1/1/2022,6645,5248
+Sarawak,Simunjan,1/1/2022,3917,3196
+Sarawak,Song,1/1/2022,3477,2926
+Sarawak,Sri Aman,1/1/2022,4881,3704
+Sarawak,Subis,1/1/2022,6390,5194
+Sarawak,Tanjung Manis,1/1/2022,4017,3300
+Sarawak,Tatau,1/1/2022,5617,4787
+Sarawak,Tebedu,1/1/2022,3218,2579
+Sarawak,Telang Usan,1/1/2022,4692,3870
+Selangor,Gombak,1/1/2022,13523,10180
+Selangor,Klang,1/1/2022,10278,8203
+Selangor,Kuala Langat,1/1/2022,11048,10093
+Selangor,Kuala Selangor,1/1/2022,9410,7644
+Selangor,Petaling,1/1/2022,12760,9618
+Selangor,Sabak Bernam,1/1/2022,6930,5533
+Selangor,Sepang,1/1/2022,13673,12608
+Selangor,Ulu Langat,1/1/2022,13386,11210
+Selangor,Ulu Selangor,1/1/2022,8779,7678
+Terengganu,Besut,1/1/2022,6285,4743
+Terengganu,Dungun,1/1/2022,7902,6356
+Terengganu,Hulu Terengganu,1/1/2022,5821,5090
+Terengganu,Kemaman,1/1/2022,8381,6425
+Terengganu,Kuala Nerus,1/1/2022,7983,6800
+Terengganu,Kuala Terengganu,1/1/2022,7109,5872
+Terengganu,Marang,1/1/2022,6357,5291
+Terengganu,Setiu,1/1/2022,6030,5211
+W.P. Kuala Lumpur,W.P. Kuala Lumpur,1/1/2022,13325,10234
+W.P. Labuan,W.P. Labuan,1/1/2022,8250,6904
+W.P. Putrajaya,W.P. Putrajaya,1/1/2022,13473,10056
+Malaysia,Malaysia,1/1/2022,8479,6338
