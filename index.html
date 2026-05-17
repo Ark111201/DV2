@@ -16,10 +16,10 @@
     <div id="vis"></div>
 
     <script type="text/javascript">
-        var spec = "js/map.vg.json";
-        vegaEmbed('#vis', spec).then(function(result) {
+    var spec = "js/dashboard.vg.json";
+    vegaEmbed('#vis', spec, { "renderer": "svg" }).then(function(result) { 
     
-        }).catch(console.error);
-    </script>
+    }).catch(console.error);
+</script>
 </body>
 </html>
