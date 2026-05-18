@@ -1,0 +1,961 @@
+state,district,date,sex,age,ethnicity,population
+Johor,Batu Pahat,1/1/2022,both,overall,bumi_malay,316.9
+Johor,Batu Pahat,1/1/2022,both,overall,bumi_other,4.5
+Johor,Batu Pahat,1/1/2022,both,overall,chinese,140.2
+Johor,Batu Pahat,1/1/2022,both,overall,indian,6.9
+Johor,Batu Pahat,1/1/2022,both,overall,other_citizen,1.8
+Johor,Batu Pahat,1/1/2022,both,overall,other_noncitizen,27.2
+Johor,Johor Bahru,1/1/2022,both,overall,bumi_malay,816.3
+Johor,Johor Bahru,1/1/2022,both,overall,bumi_other,31.9
+Johor,Johor Bahru,1/1/2022,both,overall,chinese,608.6
+Johor,Johor Bahru,1/1/2022,both,overall,indian,145.4
+Johor,Johor Bahru,1/1/2022,both,overall,other_citizen,10.5
+Johor,Johor Bahru,1/1/2022,both,overall,other_noncitizen,111
+Johor,Kluang,1/1/2022,both,overall,bumi_malay,170.3
+Johor,Kluang,1/1/2022,both,overall,bumi_other,4.6
+Johor,Kluang,1/1/2022,both,overall,chinese,91.9
+Johor,Kluang,1/1/2022,both,overall,indian,24.7
+Johor,Kluang,1/1/2022,both,overall,other_citizen,1.4
+Johor,Kluang,1/1/2022,both,overall,other_noncitizen,30.4
+Johor,Kota Tinggi,1/1/2022,both,overall,bumi_malay,184.3
+Johor,Kota Tinggi,1/1/2022,both,overall,bumi_other,3.3
+Johor,Kota Tinggi,1/1/2022,both,overall,chinese,18.5
+Johor,Kota Tinggi,1/1/2022,both,overall,indian,5.5
+Johor,Kota Tinggi,1/1/2022,both,overall,other_citizen,0.8
+Johor,Kota Tinggi,1/1/2022,both,overall,other_noncitizen,12.4
+Johor,Kulai,1/1/2022,both,overall,bumi_malay,155.3
+Johor,Kulai,1/1/2022,both,overall,bumi_other,3.9
+Johor,Kulai,1/1/2022,both,overall,chinese,95.6
+Johor,Kulai,1/1/2022,both,overall,indian,30.4
+Johor,Kulai,1/1/2022,both,overall,other_citizen,1.5
+Johor,Kulai,1/1/2022,both,overall,other_noncitizen,42.5
+Johor,Mersing,1/1/2022,both,overall,bumi_malay,64.3
+Johor,Mersing,1/1/2022,both,overall,bumi_other,2.9
+Johor,Mersing,1/1/2022,both,overall,chinese,7.1
+Johor,Mersing,1/1/2022,both,overall,indian,0.9
+Johor,Mersing,1/1/2022,both,overall,other_citizen,0.2
+Johor,Mersing,1/1/2022,both,overall,other_noncitizen,3.7
+Johor,Muar,1/1/2022,both,overall,bumi_malay,175.6
+Johor,Muar,1/1/2022,both,overall,bumi_other,1.4
+Johor,Muar,1/1/2022,both,overall,chinese,100.4
+Johor,Muar,1/1/2022,both,overall,indian,5.4
+Johor,Muar,1/1/2022,both,overall,other_citizen,0.6
+Johor,Muar,1/1/2022,both,overall,other_noncitizen,30.5
+Johor,Pontian,1/1/2022,both,overall,bumi_malay,115.5
+Johor,Pontian,1/1/2022,both,overall,bumi_other,1.6
+Johor,Pontian,1/1/2022,both,overall,chinese,42.4
+Johor,Pontian,1/1/2022,both,overall,indian,1.4
+Johor,Pontian,1/1/2022,both,overall,other_citizen,0.7
+Johor,Pontian,1/1/2022,both,overall,other_noncitizen,12
+Johor,Segamat,1/1/2022,both,overall,bumi_malay,105.9
+Johor,Segamat,1/1/2022,both,overall,bumi_other,3
+Johor,Segamat,1/1/2022,both,overall,chinese,62.7
+Johor,Segamat,1/1/2022,both,overall,indian,15.7
+Johor,Segamat,1/1/2022,both,overall,other_citizen,0.6
+Johor,Segamat,1/1/2022,both,overall,other_noncitizen,10.5
+Johor,Tangkak,1/1/2022,both,overall,bumi_malay,104.1
+Johor,Tangkak,1/1/2022,both,overall,bumi_other,1.2
+Johor,Tangkak,1/1/2022,both,overall,chinese,42.8
+Johor,Tangkak,1/1/2022,both,overall,indian,8.4
+Johor,Tangkak,1/1/2022,both,overall,other_citizen,0.8
+Johor,Tangkak,1/1/2022,both,overall,other_noncitizen,7.3
+Kedah,Baling,1/1/2022,both,overall,bumi_malay,130.7
+Kedah,Baling,1/1/2022,both,overall,bumi_other,0.5
+Kedah,Baling,1/1/2022,both,overall,chinese,4.2
+Kedah,Baling,1/1/2022,both,overall,indian,4.5
+Kedah,Baling,1/1/2022,both,overall,other_citizen,2.3
+Kedah,Baling,1/1/2022,both,overall,other_noncitizen,2.8
+Kedah,Bandar Baharu,1/1/2022,both,overall,bumi_malay,36.5
+Kedah,Bandar Baharu,1/1/2022,both,overall,bumi_other,0.1
+Kedah,Bandar Baharu,1/1/2022,both,overall,chinese,4.1
+Kedah,Bandar Baharu,1/1/2022,both,overall,indian,2.6
+Kedah,Bandar Baharu,1/1/2022,both,overall,other_citizen,0.1
+Kedah,Bandar Baharu,1/1/2022,both,overall,other_noncitizen,1.2
+Kedah,Kota Setar,1/1/2022,both,overall,bumi_malay,272.4
+Kedah,Kota Setar,1/1/2022,both,overall,bumi_other,0.5
+Kedah,Kota Setar,1/1/2022,both,overall,chinese,83.1
+Kedah,Kota Setar,1/1/2022,both,overall,indian,7.3
+Kedah,Kota Setar,1/1/2022,both,overall,other_citizen,1.2
+Kedah,Kota Setar,1/1/2022,both,overall,other_noncitizen,12.3
+Kedah,Kuala Muda,1/1/2022,both,overall,bumi_malay,372.4
+Kedah,Kuala Muda,1/1/2022,both,overall,bumi_other,1.4
+Kedah,Kuala Muda,1/1/2022,both,overall,chinese,82.7
+Kedah,Kuala Muda,1/1/2022,both,overall,indian,58.3
+Kedah,Kuala Muda,1/1/2022,both,overall,other_citizen,2.2
+Kedah,Kuala Muda,1/1/2022,both,overall,other_noncitizen,33.5
+Kedah,Kubang Pasu,1/1/2022,both,overall,bumi_malay,219.2
+Kedah,Kubang Pasu,1/1/2022,both,overall,bumi_other,0.8
+Kedah,Kubang Pasu,1/1/2022,both,overall,chinese,14.9
+Kedah,Kubang Pasu,1/1/2022,both,overall,indian,4.9
+Kedah,Kubang Pasu,1/1/2022,both,overall,other_citizen,3.3
+Kedah,Kubang Pasu,1/1/2022,both,overall,other_noncitizen,6.6
+Kedah,Kulim,1/1/2022,both,overall,bumi_malay,225.6
+Kedah,Kulim,1/1/2022,both,overall,bumi_other,0.7
+Kedah,Kulim,1/1/2022,both,overall,chinese,47.1
+Kedah,Kulim,1/1/2022,both,overall,indian,47.9
+Kedah,Kulim,1/1/2022,both,overall,other_citizen,1.5
+Kedah,Kulim,1/1/2022,both,overall,other_noncitizen,18.5
+Kedah,Langkawi,1/1/2022,both,overall,bumi_malay,84.8
+Kedah,Langkawi,1/1/2022,both,overall,bumi_other,0.3
+Kedah,Langkawi,1/1/2022,both,overall,chinese,4.6
+Kedah,Langkawi,1/1/2022,both,overall,indian,1.7
+Kedah,Langkawi,1/1/2022,both,overall,other_citizen,1
+Kedah,Langkawi,1/1/2022,both,overall,other_noncitizen,3.9
+Kedah,Padang Terap,1/1/2022,both,overall,bumi_malay,58.2
+Kedah,Padang Terap,1/1/2022,both,overall,bumi_other,0.1
+Kedah,Padang Terap,1/1/2022,both,overall,chinese,0.5
+Kedah,Padang Terap,1/1/2022,both,overall,indian,0
+Kedah,Padang Terap,1/1/2022,both,overall,other_citizen,4.6
+Kedah,Padang Terap,1/1/2022,both,overall,other_noncitizen,3.2
+Kedah,Pendang,1/1/2022,both,overall,bumi_malay,88.9
+Kedah,Pendang,1/1/2022,both,overall,bumi_other,0.1
+Kedah,Pendang,1/1/2022,both,overall,chinese,2.8
+Kedah,Pendang,1/1/2022,both,overall,indian,0.4
+Kedah,Pendang,1/1/2022,both,overall,other_citizen,5.7
+Kedah,Pendang,1/1/2022,both,overall,other_noncitizen,1.8
+Kedah,Pokok Sena,1/1/2022,both,overall,bumi_malay,43.8
+Kedah,Pokok Sena,1/1/2022,both,overall,bumi_other,0.1
+Kedah,Pokok Sena,1/1/2022,both,overall,chinese,2.4
+Kedah,Pokok Sena,1/1/2022,both,overall,indian,0.8
+Kedah,Pokok Sena,1/1/2022,both,overall,other_citizen,0.4
+Kedah,Pokok Sena,1/1/2022,both,overall,other_noncitizen,2.7
+Kedah,Sik,1/1/2022,both,overall,bumi_malay,62.6
+Kedah,Sik,1/1/2022,both,overall,bumi_other,0.1
+Kedah,Sik,1/1/2022,both,overall,chinese,0.5
+Kedah,Sik,1/1/2022,both,overall,indian,0.1
+Kedah,Sik,1/1/2022,both,overall,other_citizen,3.4
+Kedah,Sik,1/1/2022,both,overall,other_noncitizen,2
+Kedah,Yan,1/1/2022,both,overall,bumi_malay,70.4
+Kedah,Yan,1/1/2022,both,overall,bumi_other,0.1
+Kedah,Yan,1/1/2022,both,overall,chinese,2.7
+Kedah,Yan,1/1/2022,both,overall,indian,0.1
+Kedah,Yan,1/1/2022,both,overall,other_citizen,0.1
+Kedah,Yan,1/1/2022,both,overall,other_noncitizen,0.6
+Kelantan,Bachok,1/1/2022,both,overall,bumi_malay,157.5
+Kelantan,Bachok,1/1/2022,both,overall,bumi_other,0.2
+Kelantan,Bachok,1/1/2022,both,overall,chinese,1.3
+Kelantan,Bachok,1/1/2022,both,overall,indian,0.1
+Kelantan,Bachok,1/1/2022,both,overall,other_citizen,0.4
+Kelantan,Bachok,1/1/2022,both,overall,other_noncitizen,1.1
+Kelantan,Gua Musang,1/1/2022,both,overall,bumi_malay,81.2
+Kelantan,Gua Musang,1/1/2022,both,overall,bumi_other,9.8
+Kelantan,Gua Musang,1/1/2022,both,overall,chinese,4.8
+Kelantan,Gua Musang,1/1/2022,both,overall,indian,0.8
+Kelantan,Gua Musang,1/1/2022,both,overall,other_citizen,0.3
+Kelantan,Gua Musang,1/1/2022,both,overall,other_noncitizen,7.1
+Kelantan,Jeli,1/1/2022,both,overall,bumi_malay,53.4
+Kelantan,Jeli,1/1/2022,both,overall,bumi_other,1
+Kelantan,Jeli,1/1/2022,both,overall,chinese,0.1
+Kelantan,Jeli,1/1/2022,both,overall,indian,0.2
+Kelantan,Jeli,1/1/2022,both,overall,other_citizen,0.1
+Kelantan,Jeli,1/1/2022,both,overall,other_noncitizen,1.3
+Kelantan,Kecil Lojing,1/1/2022,both,overall,bumi_malay,2
+Kelantan,Kecil Lojing,1/1/2022,both,overall,bumi_other,7.9
+Kelantan,Kecil Lojing,1/1/2022,both,overall,chinese,0
+Kelantan,Kecil Lojing,1/1/2022,both,overall,indian,0.6
+Kelantan,Kecil Lojing,1/1/2022,both,overall,other_citizen,0
+Kelantan,Kecil Lojing,1/1/2022,both,overall,other_noncitizen,0.3
+Kelantan,Kota Bharu,1/1/2022,both,overall,bumi_malay,534.8
+Kelantan,Kota Bharu,1/1/2022,both,overall,bumi_other,2
+Kelantan,Kota Bharu,1/1/2022,both,overall,chinese,16.8
+Kelantan,Kota Bharu,1/1/2022,both,overall,indian,1.5
+Kelantan,Kota Bharu,1/1/2022,both,overall,other_citizen,1.6
+Kelantan,Kota Bharu,1/1/2022,both,overall,other_noncitizen,10.8
+Kelantan,Kuala Krai,1/1/2022,both,overall,bumi_malay,98.7
+Kelantan,Kuala Krai,1/1/2022,both,overall,bumi_other,0.1
+Kelantan,Kuala Krai,1/1/2022,both,overall,chinese,3.5
+Kelantan,Kuala Krai,1/1/2022,both,overall,indian,0.8
+Kelantan,Kuala Krai,1/1/2022,both,overall,other_citizen,0.2
+Kelantan,Kuala Krai,1/1/2022,both,overall,other_noncitizen,3.6
+Kelantan,Machang,1/1/2022,both,overall,bumi_malay,110.5
+Kelantan,Machang,1/1/2022,both,overall,bumi_other,0.3
+Kelantan,Machang,1/1/2022,both,overall,chinese,1.9
+Kelantan,Machang,1/1/2022,both,overall,indian,0.1
+Kelantan,Machang,1/1/2022,both,overall,other_citizen,0.1
+Kelantan,Machang,1/1/2022,both,overall,other_noncitizen,1
+Kelantan,Pasir Mas,1/1/2022,both,overall,bumi_malay,227.4
+Kelantan,Pasir Mas,1/1/2022,both,overall,bumi_other,0.2
+Kelantan,Pasir Mas,1/1/2022,both,overall,chinese,3.3
+Kelantan,Pasir Mas,1/1/2022,both,overall,indian,0
+Kelantan,Pasir Mas,1/1/2022,both,overall,other_citizen,0.8
+Kelantan,Pasir Mas,1/1/2022,both,overall,other_noncitizen,2.4
+Kelantan,Pasir Puteh,1/1/2022,both,overall,bumi_malay,136.4
+Kelantan,Pasir Puteh,1/1/2022,both,overall,bumi_other,0.2
+Kelantan,Pasir Puteh,1/1/2022,both,overall,chinese,0.6
+Kelantan,Pasir Puteh,1/1/2022,both,overall,indian,0.1
+Kelantan,Pasir Puteh,1/1/2022,both,overall,other_citizen,0.8
+Kelantan,Pasir Puteh,1/1/2022,both,overall,other_noncitizen,0.8
+Kelantan,Tanah Merah,1/1/2022,both,overall,bumi_malay,143.5
+Kelantan,Tanah Merah,1/1/2022,both,overall,bumi_other,0.3
+Kelantan,Tanah Merah,1/1/2022,both,overall,chinese,4.7
+Kelantan,Tanah Merah,1/1/2022,both,overall,indian,0.4
+Kelantan,Tanah Merah,1/1/2022,both,overall,other_citizen,0.7
+Kelantan,Tanah Merah,1/1/2022,both,overall,other_noncitizen,4.1
+Kelantan,Tumpat,1/1/2022,both,overall,bumi_malay,168.7
+Kelantan,Tumpat,1/1/2022,both,overall,bumi_other,0.2
+Kelantan,Tumpat,1/1/2022,both,overall,chinese,7.3
+Kelantan,Tumpat,1/1/2022,both,overall,indian,0.2
+Kelantan,Tumpat,1/1/2022,both,overall,other_citizen,5.9
+Kelantan,Tumpat,1/1/2022,both,overall,other_noncitizen,1.4
+Melaka,Alor Gajah,1/1/2022,both,overall,bumi_malay,185.4
+Melaka,Alor Gajah,1/1/2022,both,overall,bumi_other,2.6
+Melaka,Alor Gajah,1/1/2022,both,overall,chinese,27.7
+Melaka,Alor Gajah,1/1/2022,both,overall,indian,18.3
+Melaka,Alor Gajah,1/1/2022,both,overall,other_citizen,0.7
+Melaka,Alor Gajah,1/1/2022,both,overall,other_noncitizen,17.2
+Melaka,Jasin,1/1/2022,both,overall,bumi_malay,114.8
+Melaka,Jasin,1/1/2022,both,overall,bumi_other,1.1
+Melaka,Jasin,1/1/2022,both,overall,chinese,12.8
+Melaka,Jasin,1/1/2022,both,overall,indian,12
+Melaka,Jasin,1/1/2022,both,overall,other_citizen,0.5
+Melaka,Jasin,1/1/2022,both,overall,other_noncitizen,12.6
+Melaka,Melaka Tengah,1/1/2022,both,overall,bumi_malay,369.4
+Melaka,Melaka Tengah,1/1/2022,both,overall,bumi_other,5.9
+Melaka,Melaka Tengah,1/1/2022,both,overall,chinese,163.7
+Melaka,Melaka Tengah,1/1/2022,both,overall,indian,22
+Melaka,Melaka Tengah,1/1/2022,both,overall,other_citizen,4
+Melaka,Melaka Tengah,1/1/2022,both,overall,other_noncitizen,37.7
+Negeri Sembilan,Jelebu,1/1/2022,both,overall,bumi_malay,27.6
+Negeri Sembilan,Jelebu,1/1/2022,both,overall,bumi_other,3.6
+Negeri Sembilan,Jelebu,1/1/2022,both,overall,chinese,10.2
+Negeri Sembilan,Jelebu,1/1/2022,both,overall,indian,1.8
+Negeri Sembilan,Jelebu,1/1/2022,both,overall,other_citizen,0.2
+Negeri Sembilan,Jelebu,1/1/2022,both,overall,other_noncitizen,2.8
+Negeri Sembilan,Jempol,1/1/2022,both,overall,bumi_malay,82.4
+Negeri Sembilan,Jempol,1/1/2022,both,overall,bumi_other,4.1
+Negeri Sembilan,Jempol,1/1/2022,both,overall,chinese,21
+Negeri Sembilan,Jempol,1/1/2022,both,overall,indian,15.5
+Negeri Sembilan,Jempol,1/1/2022,both,overall,other_citizen,0.5
+Negeri Sembilan,Jempol,1/1/2022,both,overall,other_noncitizen,4.1
+Negeri Sembilan,Kuala Pilah,1/1/2022,both,overall,bumi_malay,54.2
+Negeri Sembilan,Kuala Pilah,1/1/2022,both,overall,bumi_other,1.7
+Negeri Sembilan,Kuala Pilah,1/1/2022,both,overall,chinese,9.1
+Negeri Sembilan,Kuala Pilah,1/1/2022,both,overall,indian,3.6
+Negeri Sembilan,Kuala Pilah,1/1/2022,both,overall,other_citizen,0.2
+Negeri Sembilan,Kuala Pilah,1/1/2022,both,overall,other_noncitizen,1.7
+Negeri Sembilan,Port Dickson,1/1/2022,both,overall,bumi_malay,67.3
+Negeri Sembilan,Port Dickson,1/1/2022,both,overall,bumi_other,2.2
+Negeri Sembilan,Port Dickson,1/1/2022,both,overall,chinese,31.1
+Negeri Sembilan,Port Dickson,1/1/2022,both,overall,indian,23
+Negeri Sembilan,Port Dickson,1/1/2022,both,overall,other_citizen,0.8
+Negeri Sembilan,Port Dickson,1/1/2022,both,overall,other_noncitizen,5.8
+Negeri Sembilan,Rembau,1/1/2022,both,overall,bumi_malay,38.9
+Negeri Sembilan,Rembau,1/1/2022,both,overall,bumi_other,1.1
+Negeri Sembilan,Rembau,1/1/2022,both,overall,chinese,2.2
+Negeri Sembilan,Rembau,1/1/2022,both,overall,indian,3.8
+Negeri Sembilan,Rembau,1/1/2022,both,overall,other_citizen,0.1
+Negeri Sembilan,Rembau,1/1/2022,both,overall,other_noncitizen,1.7
+Negeri Sembilan,Seremban,1/1/2022,both,overall,bumi_malay,390.3
+Negeri Sembilan,Seremban,1/1/2022,both,overall,bumi_other,7.7
+Negeri Sembilan,Seremban,1/1/2022,both,overall,chinese,154.4
+Negeri Sembilan,Seremban,1/1/2022,both,overall,indian,103.1
+Negeri Sembilan,Seremban,1/1/2022,both,overall,other_citizen,3.8
+Negeri Sembilan,Seremban,1/1/2022,both,overall,other_noncitizen,37.5
+Negeri Sembilan,Tampin,1/1/2022,both,overall,bumi_malay,51.2
+Negeri Sembilan,Tampin,1/1/2022,both,overall,bumi_other,2
+Negeri Sembilan,Tampin,1/1/2022,both,overall,chinese,19.2
+Negeri Sembilan,Tampin,1/1/2022,both,overall,indian,11.6
+Negeri Sembilan,Tampin,1/1/2022,both,overall,other_citizen,0.2
+Negeri Sembilan,Tampin,1/1/2022,both,overall,other_noncitizen,4.6
+Pahang,Bentong,1/1/2022,both,overall,bumi_malay,63.7
+Pahang,Bentong,1/1/2022,both,overall,bumi_other,3.9
+Pahang,Bentong,1/1/2022,both,overall,chinese,31
+Pahang,Bentong,1/1/2022,both,overall,indian,9.1
+Pahang,Bentong,1/1/2022,both,overall,other_citizen,0.9
+Pahang,Bentong,1/1/2022,both,overall,other_noncitizen,8
+Pahang,Bera,1/1/2022,both,overall,bumi_malay,56.1
+Pahang,Bera,1/1/2022,both,overall,bumi_other,6.9
+Pahang,Bera,1/1/2022,both,overall,chinese,25.5
+Pahang,Bera,1/1/2022,both,overall,indian,3.9
+Pahang,Bera,1/1/2022,both,overall,other_citizen,0.5
+Pahang,Bera,1/1/2022,both,overall,other_noncitizen,6.1
+Pahang,Cameron Highlands,1/1/2022,both,overall,bumi_malay,8.5
+Pahang,Cameron Highlands,1/1/2022,both,overall,bumi_other,9.3
+Pahang,Cameron Highlands,1/1/2022,both,overall,chinese,11.6
+Pahang,Cameron Highlands,1/1/2022,both,overall,indian,4.4
+Pahang,Cameron Highlands,1/1/2022,both,overall,other_citizen,0.3
+Pahang,Cameron Highlands,1/1/2022,both,overall,other_noncitizen,5
+Pahang,Jerantut,1/1/2022,both,overall,bumi_malay,74
+Pahang,Jerantut,1/1/2022,both,overall,bumi_other,4
+Pahang,Jerantut,1/1/2022,both,overall,chinese,11.1
+Pahang,Jerantut,1/1/2022,both,overall,indian,2.7
+Pahang,Jerantut,1/1/2022,both,overall,other_citizen,0.6
+Pahang,Jerantut,1/1/2022,both,overall,other_noncitizen,4.6
+Pahang,Kuantan,1/1/2022,both,overall,bumi_malay,444
+Pahang,Kuantan,1/1/2022,both,overall,bumi_other,5.9
+Pahang,Kuantan,1/1/2022,both,overall,chinese,75
+Pahang,Kuantan,1/1/2022,both,overall,indian,14.3
+Pahang,Kuantan,1/1/2022,both,overall,other_citizen,2.8
+Pahang,Kuantan,1/1/2022,both,overall,other_noncitizen,16
+Pahang,Lipis,1/1/2022,both,overall,bumi_malay,67.1
+Pahang,Lipis,1/1/2022,both,overall,bumi_other,15.7
+Pahang,Lipis,1/1/2022,both,overall,chinese,7.3
+Pahang,Lipis,1/1/2022,both,overall,indian,3.3
+Pahang,Lipis,1/1/2022,both,overall,other_citizen,0.3
+Pahang,Lipis,1/1/2022,both,overall,other_noncitizen,4.1
+Pahang,Maran,1/1/2022,both,overall,bumi_malay,102.8
+Pahang,Maran,1/1/2022,both,overall,bumi_other,3.1
+Pahang,Maran,1/1/2022,both,overall,chinese,2.8
+Pahang,Maran,1/1/2022,both,overall,indian,1.1
+Pahang,Maran,1/1/2022,both,overall,other_citizen,0.3
+Pahang,Maran,1/1/2022,both,overall,other_noncitizen,4.6
+Pahang,Pekan,1/1/2022,both,overall,bumi_malay,97.6
+Pahang,Pekan,1/1/2022,both,overall,bumi_other,13.8
+Pahang,Pekan,1/1/2022,both,overall,chinese,1.4
+Pahang,Pekan,1/1/2022,both,overall,indian,1
+Pahang,Pekan,1/1/2022,both,overall,other_citizen,1.7
+Pahang,Pekan,1/1/2022,both,overall,other_noncitizen,7.8
+Pahang,Raub,1/1/2022,both,overall,bumi_malay,50.9
+Pahang,Raub,1/1/2022,both,overall,bumi_other,5.6
+Pahang,Raub,1/1/2022,both,overall,chinese,29.4
+Pahang,Raub,1/1/2022,both,overall,indian,5.5
+Pahang,Raub,1/1/2022,both,overall,other_citizen,0.4
+Pahang,Raub,1/1/2022,both,overall,other_noncitizen,5
+Pahang,Rompin,1/1/2022,both,overall,bumi_malay,73.5
+Pahang,Rompin,1/1/2022,both,overall,bumi_other,15.9
+Pahang,Rompin,1/1/2022,both,overall,chinese,1.6
+Pahang,Rompin,1/1/2022,both,overall,indian,0.9
+Pahang,Rompin,1/1/2022,both,overall,other_citizen,0.6
+Pahang,Rompin,1/1/2022,both,overall,other_noncitizen,7.9
+Pahang,Temerloh,1/1/2022,both,overall,bumi_malay,123.1
+Pahang,Temerloh,1/1/2022,both,overall,bumi_other,8.7
+Pahang,Temerloh,1/1/2022,both,overall,chinese,24
+Pahang,Temerloh,1/1/2022,both,overall,indian,9.6
+Pahang,Temerloh,1/1/2022,both,overall,other_citizen,1
+Pahang,Temerloh,1/1/2022,both,overall,other_noncitizen,5
+Perak,Bagan Datuk,1/1/2022,both,overall,bumi_malay,41.3
+Perak,Bagan Datuk,1/1/2022,both,overall,bumi_other,0.3
+Perak,Bagan Datuk,1/1/2022,both,overall,chinese,14.3
+Perak,Bagan Datuk,1/1/2022,both,overall,indian,17
+Perak,Bagan Datuk,1/1/2022,both,overall,other_citizen,0.2
+Perak,Bagan Datuk,1/1/2022,both,overall,other_noncitizen,9.2
+Perak,Batang Padang,1/1/2022,both,overall,bumi_malay,66.4
+Perak,Batang Padang,1/1/2022,both,overall,bumi_other,17.9
+Perak,Batang Padang,1/1/2022,both,overall,chinese,20.3
+Perak,Batang Padang,1/1/2022,both,overall,indian,15.5
+Perak,Batang Padang,1/1/2022,both,overall,other_citizen,0.8
+Perak,Batang Padang,1/1/2022,both,overall,other_noncitizen,4.8
+Perak,Hilir Perak,1/1/2022,both,overall,bumi_malay,73.3
+Perak,Hilir Perak,1/1/2022,both,overall,bumi_other,2.4
+Perak,Hilir Perak,1/1/2022,both,overall,chinese,37.2
+Perak,Hilir Perak,1/1/2022,both,overall,indian,17
+Perak,Hilir Perak,1/1/2022,both,overall,other_citizen,0.7
+Perak,Hilir Perak,1/1/2022,both,overall,other_noncitizen,11.7
+Perak,Hulu Perak,1/1/2022,both,overall,bumi_malay,70.2
+Perak,Hulu Perak,1/1/2022,both,overall,bumi_other,13.2
+Perak,Hulu Perak,1/1/2022,both,overall,chinese,6.5
+Perak,Hulu Perak,1/1/2022,both,overall,indian,2
+Perak,Hulu Perak,1/1/2022,both,overall,other_citizen,1.6
+Perak,Hulu Perak,1/1/2022,both,overall,other_noncitizen,2.5
+Perak,Kampar,1/1/2022,both,overall,bumi_malay,34
+Perak,Kampar,1/1/2022,both,overall,bumi_other,4.4
+Perak,Kampar,1/1/2022,both,overall,chinese,46.1
+Perak,Kampar,1/1/2022,both,overall,indian,10
+Perak,Kampar,1/1/2022,both,overall,other_citizen,0.4
+Perak,Kampar,1/1/2022,both,overall,other_noncitizen,3.4
+Perak,Kerian,1/1/2022,both,overall,bumi_malay,126.1
+Perak,Kerian,1/1/2022,both,overall,bumi_other,0.2
+Perak,Kerian,1/1/2022,both,overall,chinese,25.1
+Perak,Kerian,1/1/2022,both,overall,indian,10.1
+Perak,Kerian,1/1/2022,both,overall,other_citizen,0.7
+Perak,Kerian,1/1/2022,both,overall,other_noncitizen,5.3
+Perak,Kinta,1/1/2022,both,overall,bumi_malay,402.7
+Perak,Kinta,1/1/2022,both,overall,bumi_other,10.9
+Perak,Kinta,1/1/2022,both,overall,chinese,320.2
+Perak,Kinta,1/1/2022,both,overall,indian,111
+Perak,Kinta,1/1/2022,both,overall,other_citizen,3.6
+Perak,Kinta,1/1/2022,both,overall,other_noncitizen,47.3
+Perak,Kuala Kangsar,1/1/2022,both,overall,bumi_malay,105
+Perak,Kuala Kangsar,1/1/2022,both,overall,bumi_other,10.4
+Perak,Kuala Kangsar,1/1/2022,both,overall,chinese,33.4
+Perak,Kuala Kangsar,1/1/2022,both,overall,indian,22.9
+Perak,Kuala Kangsar,1/1/2022,both,overall,other_citizen,0.4
+Perak,Kuala Kangsar,1/1/2022,both,overall,other_noncitizen,4.6
+Perak,Larut Dan Matang,1/1/2022,both,overall,bumi_malay,173.3
+Perak,Larut Dan Matang,1/1/2022,both,overall,bumi_other,1.4
+Perak,Larut Dan Matang,1/1/2022,both,overall,chinese,61.1
+Perak,Larut Dan Matang,1/1/2022,both,overall,indian,25.3
+Perak,Larut Dan Matang,1/1/2022,both,overall,other_citizen,0.9
+Perak,Larut Dan Matang,1/1/2022,both,overall,other_noncitizen,10.6
+Perak,Manjung,1/1/2022,both,overall,bumi_malay,134.5
+Perak,Manjung,1/1/2022,both,overall,bumi_other,2.8
+Perak,Manjung,1/1/2022,both,overall,chinese,65.5
+Perak,Manjung,1/1/2022,both,overall,indian,29.6
+Perak,Manjung,1/1/2022,both,overall,other_citizen,0.9
+Perak,Manjung,1/1/2022,both,overall,other_noncitizen,16.3
+Perak,Muallim,1/1/2022,both,overall,bumi_malay,52.6
+Perak,Muallim,1/1/2022,both,overall,bumi_other,7.2
+Perak,Muallim,1/1/2022,both,overall,chinese,6.4
+Perak,Muallim,1/1/2022,both,overall,indian,8.2
+Perak,Muallim,1/1/2022,both,overall,other_citizen,0.5
+Perak,Muallim,1/1/2022,both,overall,other_noncitizen,3
+Perak,Perak Tengah,1/1/2022,both,overall,bumi_malay,86.5
+Perak,Perak Tengah,1/1/2022,both,overall,bumi_other,3.3
+Perak,Perak Tengah,1/1/2022,both,overall,chinese,0.8
+Perak,Perak Tengah,1/1/2022,both,overall,indian,1.3
+Perak,Perak Tengah,1/1/2022,both,overall,other_citizen,0.2
+Perak,Perak Tengah,1/1/2022,both,overall,other_noncitizen,3.5
+Perak,Selama,1/1/2022,both,overall,bumi_malay,30.9
+Perak,Selama,1/1/2022,both,overall,bumi_other,0.1
+Perak,Selama,1/1/2022,both,overall,chinese,1.4
+Perak,Selama,1/1/2022,both,overall,indian,1.4
+Perak,Selama,1/1/2022,both,overall,other_citizen,0
+Perak,Selama,1/1/2022,both,overall,other_noncitizen,0.8
+Perlis,Perlis,1/1/2022,both,overall,bumi_malay,249.4
+Perlis,Perlis,1/1/2022,both,overall,bumi_other,1.5
+Perlis,Perlis,1/1/2022,both,overall,chinese,20.2
+Perlis,Perlis,1/1/2022,both,overall,indian,5.1
+Perlis,Perlis,1/1/2022,both,overall,other_citizen,5.7
+Perlis,Perlis,1/1/2022,both,overall,other_noncitizen,7.9
+Pulau Pinang,Barat Daya,1/1/2022,both,overall,bumi_malay,128.4
+Pulau Pinang,Barat Daya,1/1/2022,both,overall,bumi_other,1.1
+Pulau Pinang,Barat Daya,1/1/2022,both,overall,chinese,82.1
+Pulau Pinang,Barat Daya,1/1/2022,both,overall,indian,13.4
+Pulau Pinang,Barat Daya,1/1/2022,both,overall,other_citizen,1.1
+Pulau Pinang,Barat Daya,1/1/2022,both,overall,other_noncitizen,13.5
+Pulau Pinang,Seberang Perai Selatan,1/1/2022,both,overall,bumi_malay,78.3
+Pulau Pinang,Seberang Perai Selatan,1/1/2022,both,overall,bumi_other,0.3
+Pulau Pinang,Seberang Perai Selatan,1/1/2022,both,overall,chinese,65.5
+Pulau Pinang,Seberang Perai Selatan,1/1/2022,both,overall,indian,30.1
+Pulau Pinang,Seberang Perai Selatan,1/1/2022,both,overall,other_citizen,0.5
+Pulau Pinang,Seberang Perai Selatan,1/1/2022,both,overall,other_noncitizen,10.8
+Pulau Pinang,Seberang Perai Tengah,1/1/2022,both,overall,bumi_malay,188.6
+Pulau Pinang,Seberang Perai Tengah,1/1/2022,both,overall,bumi_other,1.3
+Pulau Pinang,Seberang Perai Tengah,1/1/2022,both,overall,chinese,150.1
+Pulau Pinang,Seberang Perai Tengah,1/1/2022,both,overall,indian,37.9
+Pulau Pinang,Seberang Perai Tengah,1/1/2022,both,overall,other_citizen,2.3
+Pulau Pinang,Seberang Perai Tengah,1/1/2022,both,overall,other_noncitizen,42.6
+Pulau Pinang,Seberang Perai Utara,1/1/2022,both,overall,bumi_malay,206.2
+Pulau Pinang,Seberang Perai Utara,1/1/2022,both,overall,bumi_other,0.9
+Pulau Pinang,Seberang Perai Utara,1/1/2022,both,overall,chinese,95.4
+Pulau Pinang,Seberang Perai Utara,1/1/2022,both,overall,indian,22.5
+Pulau Pinang,Seberang Perai Utara,1/1/2022,both,overall,other_citizen,1.1
+Pulau Pinang,Seberang Perai Utara,1/1/2022,both,overall,other_noncitizen,15.4
+Pulau Pinang,Timur Laut,1/1/2022,both,overall,bumi_malay,119.9
+Pulau Pinang,Timur Laut,1/1/2022,both,overall,bumi_other,3.5
+Pulau Pinang,Timur Laut,1/1/2022,both,overall,chinese,322.1
+Pulau Pinang,Timur Laut,1/1/2022,both,overall,indian,51.3
+Pulau Pinang,Timur Laut,1/1/2022,both,overall,other_citizen,5.3
+Pulau Pinang,Timur Laut,1/1/2022,both,overall,other_noncitizen,49.7
+Sabah,Beaufort,1/1/2022,both,overall,bumi_malay,17.8
+Sabah,Beaufort,1/1/2022,both,overall,bumi_other,47.9
+Sabah,Beaufort,1/1/2022,both,overall,chinese,4.1
+Sabah,Beaufort,1/1/2022,both,overall,indian,0.1
+Sabah,Beaufort,1/1/2022,both,overall,other_citizen,0.6
+Sabah,Beaufort,1/1/2022,both,overall,other_noncitizen,5.7
+Sabah,Beluran,1/1/2022,both,overall,bumi_malay,2.5
+Sabah,Beluran,1/1/2022,both,overall,bumi_other,41.6
+Sabah,Beluran,1/1/2022,both,overall,chinese,0.2
+Sabah,Beluran,1/1/2022,both,overall,indian,0
+Sabah,Beluran,1/1/2022,both,overall,other_citizen,0.5
+Sabah,Beluran,1/1/2022,both,overall,other_noncitizen,31.5
+Sabah,Kalabakan,1/1/2022,both,overall,bumi_malay,0.5
+Sabah,Kalabakan,1/1/2022,both,overall,bumi_other,16.9
+Sabah,Kalabakan,1/1/2022,both,overall,chinese,0.1
+Sabah,Kalabakan,1/1/2022,both,overall,indian,0
+Sabah,Kalabakan,1/1/2022,both,overall,other_citizen,0.2
+Sabah,Kalabakan,1/1/2022,both,overall,other_noncitizen,28.9
+Sabah,Keningau,1/1/2022,both,overall,bumi_malay,5
+Sabah,Keningau,1/1/2022,both,overall,bumi_other,122.6
+Sabah,Keningau,1/1/2022,both,overall,chinese,7.1
+Sabah,Keningau,1/1/2022,both,overall,indian,0.1
+Sabah,Keningau,1/1/2022,both,overall,other_citizen,1.3
+Sabah,Keningau,1/1/2022,both,overall,other_noncitizen,17
+Sabah,Kinabatangan,1/1/2022,both,overall,bumi_malay,3.6
+Sabah,Kinabatangan,1/1/2022,both,overall,bumi_other,36.4
+Sabah,Kinabatangan,1/1/2022,both,overall,chinese,0.3
+Sabah,Kinabatangan,1/1/2022,both,overall,indian,0.1
+Sabah,Kinabatangan,1/1/2022,both,overall,other_citizen,3.1
+Sabah,Kinabatangan,1/1/2022,both,overall,other_noncitizen,94.6
+Sabah,Kota Belud,1/1/2022,both,overall,bumi_malay,2.2
+Sabah,Kota Belud,1/1/2022,both,overall,bumi_other,100
+Sabah,Kota Belud,1/1/2022,both,overall,chinese,1.8
+Sabah,Kota Belud,1/1/2022,both,overall,indian,0.1
+Sabah,Kota Belud,1/1/2022,both,overall,other_citizen,0.4
+Sabah,Kota Belud,1/1/2022,both,overall,other_noncitizen,3.8
+Sabah,Kota Kinabalu,1/1/2022,both,overall,bumi_malay,68.9
+Sabah,Kota Kinabalu,1/1/2022,both,overall,bumi_other,266.8
+Sabah,Kota Kinabalu,1/1/2022,both,overall,chinese,76.6
+Sabah,Kota Kinabalu,1/1/2022,both,overall,indian,1.9
+Sabah,Kota Kinabalu,1/1/2022,both,overall,other_citizen,4.8
+Sabah,Kota Kinabalu,1/1/2022,both,overall,other_noncitizen,81.7
+Sabah,Kota Marudu,1/1/2022,both,overall,bumi_malay,1.8
+Sabah,Kota Marudu,1/1/2022,both,overall,bumi_other,64.9
+Sabah,Kota Marudu,1/1/2022,both,overall,chinese,1.4
+Sabah,Kota Marudu,1/1/2022,both,overall,indian,0
+Sabah,Kota Marudu,1/1/2022,both,overall,other_citizen,0.3
+Sabah,Kota Marudu,1/1/2022,both,overall,other_noncitizen,2.7
+Sabah,Kuala Penyu,1/1/2022,both,overall,bumi_malay,7.1
+Sabah,Kuala Penyu,1/1/2022,both,overall,bumi_other,15.2
+Sabah,Kuala Penyu,1/1/2022,both,overall,chinese,0.2
+Sabah,Kuala Penyu,1/1/2022,both,overall,indian,0
+Sabah,Kuala Penyu,1/1/2022,both,overall,other_citizen,0.2
+Sabah,Kuala Penyu,1/1/2022,both,overall,other_noncitizen,1
+Sabah,Kudat,1/1/2022,both,overall,bumi_malay,5.6
+Sabah,Kudat,1/1/2022,both,overall,bumi_other,69.2
+Sabah,Kudat,1/1/2022,both,overall,chinese,4.6
+Sabah,Kudat,1/1/2022,both,overall,indian,0
+Sabah,Kudat,1/1/2022,both,overall,other_citizen,0.3
+Sabah,Kudat,1/1/2022,both,overall,other_noncitizen,7.6
+Sabah,Kunak,1/1/2022,both,overall,bumi_malay,2
+Sabah,Kunak,1/1/2022,both,overall,bumi_other,30.4
+Sabah,Kunak,1/1/2022,both,overall,chinese,0.6
+Sabah,Kunak,1/1/2022,both,overall,indian,0.1
+Sabah,Kunak,1/1/2022,both,overall,other_citizen,2.1
+Sabah,Kunak,1/1/2022,both,overall,other_noncitizen,32.7
+Sabah,Lahad Datu,1/1/2022,both,overall,bumi_malay,12.4
+Sabah,Lahad Datu,1/1/2022,both,overall,bumi_other,121.1
+Sabah,Lahad Datu,1/1/2022,both,overall,chinese,10
+Sabah,Lahad Datu,1/1/2022,both,overall,indian,0.4
+Sabah,Lahad Datu,1/1/2022,both,overall,other_citizen,4.8
+Sabah,Lahad Datu,1/1/2022,both,overall,other_noncitizen,78.3
+Sabah,Nabawan,1/1/2022,both,overall,bumi_malay,0.2
+Sabah,Nabawan,1/1/2022,both,overall,bumi_other,27.9
+Sabah,Nabawan,1/1/2022,both,overall,chinese,0.1
+Sabah,Nabawan,1/1/2022,both,overall,indian,0
+Sabah,Nabawan,1/1/2022,both,overall,other_citizen,0
+Sabah,Nabawan,1/1/2022,both,overall,other_noncitizen,1.1
+Sabah,Papar,1/1/2022,both,overall,bumi_malay,37.5
+Sabah,Papar,1/1/2022,both,overall,bumi_other,96.7
+Sabah,Papar,1/1/2022,both,overall,chinese,5.4
+Sabah,Papar,1/1/2022,both,overall,indian,0.1
+Sabah,Papar,1/1/2022,both,overall,other_citizen,1
+Sabah,Papar,1/1/2022,both,overall,other_noncitizen,11.8
+Sabah,Penampang,1/1/2022,both,overall,bumi_malay,13
+Sabah,Penampang,1/1/2022,both,overall,bumi_other,97.6
+Sabah,Penampang,1/1/2022,both,overall,chinese,33
+Sabah,Penampang,1/1/2022,both,overall,indian,0.5
+Sabah,Penampang,1/1/2022,both,overall,other_citizen,1.8
+Sabah,Penampang,1/1/2022,both,overall,other_noncitizen,17.3
+Sabah,Pitas,1/1/2022,both,overall,bumi_malay,0.7
+Sabah,Pitas,1/1/2022,both,overall,bumi_other,34.4
+Sabah,Pitas,1/1/2022,both,overall,chinese,0.3
+Sabah,Pitas,1/1/2022,both,overall,indian,0
+Sabah,Pitas,1/1/2022,both,overall,other_citizen,0.1
+Sabah,Pitas,1/1/2022,both,overall,other_noncitizen,1.8
+Sabah,Putatan,1/1/2022,both,overall,bumi_malay,13.6
+Sabah,Putatan,1/1/2022,both,overall,bumi_other,45.3
+Sabah,Putatan,1/1/2022,both,overall,chinese,3.9
+Sabah,Putatan,1/1/2022,both,overall,indian,0.3
+Sabah,Putatan,1/1/2022,both,overall,other_citizen,1.1
+Sabah,Putatan,1/1/2022,both,overall,other_noncitizen,5
+Sabah,Ranau,1/1/2022,both,overall,bumi_malay,7.2
+Sabah,Ranau,1/1/2022,both,overall,bumi_other,73.1
+Sabah,Ranau,1/1/2022,both,overall,chinese,0.7
+Sabah,Ranau,1/1/2022,both,overall,indian,0
+Sabah,Ranau,1/1/2022,both,overall,other_citizen,0.2
+Sabah,Ranau,1/1/2022,both,overall,other_noncitizen,5.1
+Sabah,Sandakan,1/1/2022,both,overall,bumi_malay,49.8
+Sabah,Sandakan,1/1/2022,both,overall,bumi_other,193.6
+Sabah,Sandakan,1/1/2022,both,overall,chinese,52.4
+Sabah,Sandakan,1/1/2022,both,overall,indian,0.8
+Sabah,Sandakan,1/1/2022,both,overall,other_citizen,5.7
+Sabah,Sandakan,1/1/2022,both,overall,other_noncitizen,133
+Sabah,Semporna,1/1/2022,both,overall,bumi_malay,4
+Sabah,Semporna,1/1/2022,both,overall,bumi_other,98.9
+Sabah,Semporna,1/1/2022,both,overall,chinese,1
+Sabah,Semporna,1/1/2022,both,overall,indian,0.1
+Sabah,Semporna,1/1/2022,both,overall,other_citizen,1.2
+Sabah,Semporna,1/1/2022,both,overall,other_noncitizen,60.2
+Sabah,Sipitang,1/1/2022,both,overall,bumi_malay,10.9
+Sabah,Sipitang,1/1/2022,both,overall,bumi_other,22.6
+Sabah,Sipitang,1/1/2022,both,overall,chinese,0.5
+Sabah,Sipitang,1/1/2022,both,overall,indian,0
+Sabah,Sipitang,1/1/2022,both,overall,other_citizen,0.2
+Sabah,Sipitang,1/1/2022,both,overall,other_noncitizen,3.9
+Sabah,Tambunan,1/1/2022,both,overall,bumi_malay,0.3
+Sabah,Tambunan,1/1/2022,both,overall,bumi_other,30.3
+Sabah,Tambunan,1/1/2022,both,overall,chinese,0.2
+Sabah,Tambunan,1/1/2022,both,overall,indian,0
+Sabah,Tambunan,1/1/2022,both,overall,other_citizen,0
+Sabah,Tambunan,1/1/2022,both,overall,other_noncitizen,1.3
+Sabah,Tawau,1/1/2022,both,overall,bumi_malay,30.9
+Sabah,Tawau,1/1/2022,both,overall,bumi_other,188.1
+Sabah,Tawau,1/1/2022,both,overall,chinese,36.8
+Sabah,Tawau,1/1/2022,both,overall,indian,0.6
+Sabah,Tawau,1/1/2022,both,overall,other_citizen,10.4
+Sabah,Tawau,1/1/2022,both,overall,other_noncitizen,102.9
+Sabah,Telupid,1/1/2022,both,overall,bumi_malay,0.5
+Sabah,Telupid,1/1/2022,both,overall,bumi_other,16.8
+Sabah,Telupid,1/1/2022,both,overall,chinese,0.1
+Sabah,Telupid,1/1/2022,both,overall,indian,0.1
+Sabah,Telupid,1/1/2022,both,overall,other_citizen,0.6
+Sabah,Telupid,1/1/2022,both,overall,other_noncitizen,10.8
+Sabah,Tenom,1/1/2022,both,overall,bumi_malay,3.9
+Sabah,Tenom,1/1/2022,both,overall,bumi_other,43.9
+Sabah,Tenom,1/1/2022,both,overall,chinese,1.6
+Sabah,Tenom,1/1/2022,both,overall,indian,0
+Sabah,Tenom,1/1/2022,both,overall,other_citizen,0.2
+Sabah,Tenom,1/1/2022,both,overall,other_noncitizen,2.3
+Sabah,Tongod,1/1/2022,both,overall,bumi_malay,0.4
+Sabah,Tongod,1/1/2022,both,overall,bumi_other,26.1
+Sabah,Tongod,1/1/2022,both,overall,chinese,0.2
+Sabah,Tongod,1/1/2022,both,overall,indian,0
+Sabah,Tongod,1/1/2022,both,overall,other_citizen,0.1
+Sabah,Tongod,1/1/2022,both,overall,other_noncitizen,15.4
+Sabah,Tuaran,1/1/2022,both,overall,bumi_malay,13.9
+Sabah,Tuaran,1/1/2022,both,overall,bumi_other,112.1
+Sabah,Tuaran,1/1/2022,both,overall,chinese,2.9
+Sabah,Tuaran,1/1/2022,both,overall,indian,0.2
+Sabah,Tuaran,1/1/2022,both,overall,other_citizen,1
+Sabah,Tuaran,1/1/2022,both,overall,other_noncitizen,7.1
+Sarawak,Asajaya,1/1/2022,both,overall,bumi_malay,29.3
+Sarawak,Asajaya,1/1/2022,both,overall,bumi_other,3
+Sarawak,Asajaya,1/1/2022,both,overall,chinese,1.5
+Sarawak,Asajaya,1/1/2022,both,overall,indian,0
+Sarawak,Asajaya,1/1/2022,both,overall,other_citizen,0
+Sarawak,Asajaya,1/1/2022,both,overall,other_noncitizen,0.3
+Sarawak,Bau,1/1/2022,both,overall,bumi_malay,4.8
+Sarawak,Bau,1/1/2022,both,overall,bumi_other,38.4
+Sarawak,Bau,1/1/2022,both,overall,chinese,8.7
+Sarawak,Bau,1/1/2022,both,overall,indian,0.1
+Sarawak,Bau,1/1/2022,both,overall,other_citizen,0.1
+Sarawak,Bau,1/1/2022,both,overall,other_noncitizen,1
+Sarawak,Belaga,1/1/2022,both,overall,bumi_malay,0.7
+Sarawak,Belaga,1/1/2022,both,overall,bumi_other,18.7
+Sarawak,Belaga,1/1/2022,both,overall,chinese,0.4
+Sarawak,Belaga,1/1/2022,both,overall,indian,0
+Sarawak,Belaga,1/1/2022,both,overall,other_citizen,0.1
+Sarawak,Belaga,1/1/2022,both,overall,other_noncitizen,2.8
+Sarawak,Beluru,1/1/2022,both,overall,bumi_malay,2.9
+Sarawak,Beluru,1/1/2022,both,overall,bumi_other,16.8
+Sarawak,Beluru,1/1/2022,both,overall,chinese,0.5
+Sarawak,Beluru,1/1/2022,both,overall,indian,0
+Sarawak,Beluru,1/1/2022,both,overall,other_citizen,0.1
+Sarawak,Beluru,1/1/2022,both,overall,other_noncitizen,7.8
+Sarawak,Betong,1/1/2022,both,overall,bumi_malay,15.1
+Sarawak,Betong,1/1/2022,both,overall,bumi_other,19.8
+Sarawak,Betong,1/1/2022,both,overall,chinese,1.3
+Sarawak,Betong,1/1/2022,both,overall,indian,0
+Sarawak,Betong,1/1/2022,both,overall,other_citizen,0
+Sarawak,Betong,1/1/2022,both,overall,other_noncitizen,0.3
+Sarawak,Bintulu,1/1/2022,both,overall,bumi_malay,25
+Sarawak,Bintulu,1/1/2022,both,overall,bumi_other,105.5
+Sarawak,Bintulu,1/1/2022,both,overall,chinese,33.6
+Sarawak,Bintulu,1/1/2022,both,overall,indian,0.3
+Sarawak,Bintulu,1/1/2022,both,overall,other_citizen,0.6
+Sarawak,Bintulu,1/1/2022,both,overall,other_noncitizen,14.8
+Sarawak,Bukit Mabong,1/1/2022,both,overall,bumi_malay,0.1
+Sarawak,Bukit Mabong,1/1/2022,both,overall,bumi_other,9.5
+Sarawak,Bukit Mabong,1/1/2022,both,overall,chinese,0.2
+Sarawak,Bukit Mabong,1/1/2022,both,overall,indian,0
+Sarawak,Bukit Mabong,1/1/2022,both,overall,other_citizen,0
+Sarawak,Bukit Mabong,1/1/2022,both,overall,other_noncitizen,0.7
+Sarawak,Dalat,1/1/2022,both,overall,bumi_malay,0.7
+Sarawak,Dalat,1/1/2022,both,overall,bumi_other,16.7
+Sarawak,Dalat,1/1/2022,both,overall,chinese,1.1
+Sarawak,Dalat,1/1/2022,both,overall,indian,0
+Sarawak,Dalat,1/1/2022,both,overall,other_citizen,0
+Sarawak,Dalat,1/1/2022,both,overall,other_noncitizen,2.6
+Sarawak,Daro,1/1/2022,both,overall,bumi_malay,0.9
+Sarawak,Daro,1/1/2022,both,overall,bumi_other,16.4
+Sarawak,Daro,1/1/2022,both,overall,chinese,0.2
+Sarawak,Daro,1/1/2022,both,overall,indian,0
+Sarawak,Daro,1/1/2022,both,overall,other_citizen,0.1
+Sarawak,Daro,1/1/2022,both,overall,other_noncitizen,2
+Sarawak,Julau,1/1/2022,both,overall,bumi_malay,0.2
+Sarawak,Julau,1/1/2022,both,overall,bumi_other,14.7
+Sarawak,Julau,1/1/2022,both,overall,chinese,0.4
+Sarawak,Julau,1/1/2022,both,overall,indian,0
+Sarawak,Julau,1/1/2022,both,overall,other_citizen,0
+Sarawak,Julau,1/1/2022,both,overall,other_noncitizen,0
+Sarawak,Kabong,1/1/2022,both,overall,bumi_malay,9.2
+Sarawak,Kabong,1/1/2022,both,overall,bumi_other,8.5
+Sarawak,Kabong,1/1/2022,both,overall,chinese,0.8
+Sarawak,Kabong,1/1/2022,both,overall,indian,0
+Sarawak,Kabong,1/1/2022,both,overall,other_citizen,0
+Sarawak,Kabong,1/1/2022,both,overall,other_noncitizen,0.1
+Sarawak,Kanowit,1/1/2022,both,overall,bumi_malay,1
+Sarawak,Kanowit,1/1/2022,both,overall,bumi_other,21
+Sarawak,Kanowit,1/1/2022,both,overall,chinese,2.1
+Sarawak,Kanowit,1/1/2022,both,overall,indian,0
+Sarawak,Kanowit,1/1/2022,both,overall,other_citizen,0
+Sarawak,Kanowit,1/1/2022,both,overall,other_noncitizen,0.4
+Sarawak,Kapit,1/1/2022,both,overall,bumi_malay,1.3
+Sarawak,Kapit,1/1/2022,both,overall,bumi_other,32.1
+Sarawak,Kapit,1/1/2022,both,overall,chinese,2.5
+Sarawak,Kapit,1/1/2022,both,overall,indian,0
+Sarawak,Kapit,1/1/2022,both,overall,other_citizen,0
+Sarawak,Kapit,1/1/2022,both,overall,other_noncitizen,0.4
+Sarawak,Kuching,1/1/2022,both,overall,bumi_malay,229.7
+Sarawak,Kuching,1/1/2022,both,overall,bumi_other,154.2
+Sarawak,Kuching,1/1/2022,both,overall,chinese,218.7
+Sarawak,Kuching,1/1/2022,both,overall,indian,2.5
+Sarawak,Kuching,1/1/2022,both,overall,other_citizen,1.5
+Sarawak,Kuching,1/1/2022,both,overall,other_noncitizen,9.3
+Sarawak,Lawas,1/1/2022,both,overall,bumi_malay,14.7
+Sarawak,Lawas,1/1/2022,both,overall,bumi_other,18.2
+Sarawak,Lawas,1/1/2022,both,overall,chinese,2.4
+Sarawak,Lawas,1/1/2022,both,overall,indian,0
+Sarawak,Lawas,1/1/2022,both,overall,other_citizen,0.2
+Sarawak,Lawas,1/1/2022,both,overall,other_noncitizen,1.7
+Sarawak,Limbang,1/1/2022,both,overall,bumi_malay,12.9
+Sarawak,Limbang,1/1/2022,both,overall,bumi_other,26.3
+Sarawak,Limbang,1/1/2022,both,overall,chinese,5.1
+Sarawak,Limbang,1/1/2022,both,overall,indian,0
+Sarawak,Limbang,1/1/2022,both,overall,other_citizen,0.1
+Sarawak,Limbang,1/1/2022,both,overall,other_noncitizen,1.1
+Sarawak,Lubok Antu,1/1/2022,both,overall,bumi_malay,0.9
+Sarawak,Lubok Antu,1/1/2022,both,overall,bumi_other,21.6
+Sarawak,Lubok Antu,1/1/2022,both,overall,chinese,1.4
+Sarawak,Lubok Antu,1/1/2022,both,overall,indian,0
+Sarawak,Lubok Antu,1/1/2022,both,overall,other_citizen,0
+Sarawak,Lubok Antu,1/1/2022,both,overall,other_noncitizen,0.7
+Sarawak,Lundu,1/1/2022,both,overall,bumi_malay,10.9
+Sarawak,Lundu,1/1/2022,both,overall,bumi_other,17.1
+Sarawak,Lundu,1/1/2022,both,overall,chinese,3.2
+Sarawak,Lundu,1/1/2022,both,overall,indian,0
+Sarawak,Lundu,1/1/2022,both,overall,other_citizen,0.1
+Sarawak,Lundu,1/1/2022,both,overall,other_noncitizen,2.5
+Sarawak,Maradong,1/1/2022,both,overall,bumi_malay,3.2
+Sarawak,Maradong,1/1/2022,both,overall,bumi_other,9.4
+Sarawak,Maradong,1/1/2022,both,overall,chinese,7.4
+Sarawak,Maradong,1/1/2022,both,overall,indian,0
+Sarawak,Maradong,1/1/2022,both,overall,other_citizen,0.1
+Sarawak,Maradong,1/1/2022,both,overall,other_noncitizen,0.4
+Sarawak,Marudi,1/1/2022,both,overall,bumi_malay,2.5
+Sarawak,Marudi,1/1/2022,both,overall,bumi_other,12
+Sarawak,Marudi,1/1/2022,both,overall,chinese,2
+Sarawak,Marudi,1/1/2022,both,overall,indian,0
+Sarawak,Marudi,1/1/2022,both,overall,other_citizen,0.2
+Sarawak,Marudi,1/1/2022,both,overall,other_noncitizen,2.2
+Sarawak,Matu,1/1/2022,both,overall,bumi_malay,0.6
+Sarawak,Matu,1/1/2022,both,overall,bumi_other,13.2
+Sarawak,Matu,1/1/2022,both,overall,chinese,0.3
+Sarawak,Matu,1/1/2022,both,overall,indian,0
+Sarawak,Matu,1/1/2022,both,overall,other_citizen,0.1
+Sarawak,Matu,1/1/2022,both,overall,other_noncitizen,2.2
+Sarawak,Miri,1/1/2022,both,overall,bumi_malay,48.8
+Sarawak,Miri,1/1/2022,both,overall,bumi_other,115.5
+Sarawak,Miri,1/1/2022,both,overall,chinese,73.7
+Sarawak,Miri,1/1/2022,both,overall,indian,0.7
+Sarawak,Miri,1/1/2022,both,overall,other_citizen,0.8
+Sarawak,Miri,1/1/2022,both,overall,other_noncitizen,11.7
+Sarawak,Mukah,1/1/2022,both,overall,bumi_malay,3.3
+Sarawak,Mukah,1/1/2022,both,overall,bumi_other,31.7
+Sarawak,Mukah,1/1/2022,both,overall,chinese,3.2
+Sarawak,Mukah,1/1/2022,both,overall,indian,0
+Sarawak,Mukah,1/1/2022,both,overall,other_citizen,0.1
+Sarawak,Mukah,1/1/2022,both,overall,other_noncitizen,4.2
+Sarawak,Pakan,1/1/2022,both,overall,bumi_malay,0.1
+Sarawak,Pakan,1/1/2022,both,overall,bumi_other,15.1
+Sarawak,Pakan,1/1/2022,both,overall,chinese,0.2
+Sarawak,Pakan,1/1/2022,both,overall,indian,0
+Sarawak,Pakan,1/1/2022,both,overall,other_citizen,0
+Sarawak,Pakan,1/1/2022,both,overall,other_noncitizen,0.1
+Sarawak,Pusa,1/1/2022,both,overall,bumi_malay,17.9
+Sarawak,Pusa,1/1/2022,both,overall,bumi_other,0.9
+Sarawak,Pusa,1/1/2022,both,overall,chinese,0.2
+Sarawak,Pusa,1/1/2022,both,overall,indian,0
+Sarawak,Pusa,1/1/2022,both,overall,other_citizen,0
+Sarawak,Pusa,1/1/2022,both,overall,other_noncitizen,0.7
+Sarawak,Samarahan,1/1/2022,both,overall,bumi_malay,60
+Sarawak,Samarahan,1/1/2022,both,overall,bumi_other,47.4
+Sarawak,Samarahan,1/1/2022,both,overall,chinese,23.8
+Sarawak,Samarahan,1/1/2022,both,overall,indian,0.7
+Sarawak,Samarahan,1/1/2022,both,overall,other_citizen,0.3
+Sarawak,Samarahan,1/1/2022,both,overall,other_noncitizen,1.3
+Sarawak,Saratok,1/1/2022,both,overall,bumi_malay,6.3
+Sarawak,Saratok,1/1/2022,both,overall,bumi_other,15.5
+Sarawak,Saratok,1/1/2022,both,overall,chinese,1.1
+Sarawak,Saratok,1/1/2022,both,overall,indian,0
+Sarawak,Saratok,1/1/2022,both,overall,other_citizen,0
+Sarawak,Saratok,1/1/2022,both,overall,other_noncitizen,0.2
+Sarawak,Sarikei,1/1/2022,both,overall,bumi_malay,7.5
+Sarawak,Sarikei,1/1/2022,both,overall,bumi_other,19.4
+Sarawak,Sarikei,1/1/2022,both,overall,chinese,17
+Sarawak,Sarikei,1/1/2022,both,overall,indian,0
+Sarawak,Sarikei,1/1/2022,both,overall,other_citizen,0.1
+Sarawak,Sarikei,1/1/2022,both,overall,other_noncitizen,0.5
+Sarawak,Sebauh,1/1/2022,both,overall,bumi_malay,1.2
+Sarawak,Sebauh,1/1/2022,both,overall,bumi_other,18.8
+Sarawak,Sebauh,1/1/2022,both,overall,chinese,0.7
+Sarawak,Sebauh,1/1/2022,both,overall,indian,0
+Sarawak,Sebauh,1/1/2022,both,overall,other_citizen,0.1
+Sarawak,Sebauh,1/1/2022,both,overall,other_noncitizen,8.3
+Sarawak,Selangau,1/1/2022,both,overall,bumi_malay,0.3
+Sarawak,Selangau,1/1/2022,both,overall,bumi_other,18
+Sarawak,Selangau,1/1/2022,both,overall,chinese,0.5
+Sarawak,Selangau,1/1/2022,both,overall,indian,0
+Sarawak,Selangau,1/1/2022,both,overall,other_citizen,0
+Sarawak,Selangau,1/1/2022,both,overall,other_noncitizen,1.1
+Sarawak,Serian,1/1/2022,both,overall,bumi_malay,10
+Sarawak,Serian,1/1/2022,both,overall,bumi_other,59.8
+Sarawak,Serian,1/1/2022,both,overall,chinese,14.4
+Sarawak,Serian,1/1/2022,both,overall,indian,0.1
+Sarawak,Serian,1/1/2022,both,overall,other_citizen,0.1
+Sarawak,Serian,1/1/2022,both,overall,other_noncitizen,1.5
+Sarawak,Sibu,1/1/2022,both,overall,bumi_malay,25
+Sarawak,Sibu,1/1/2022,both,overall,bumi_other,96.3
+Sarawak,Sibu,1/1/2022,both,overall,chinese,114.6
+Sarawak,Sibu,1/1/2022,both,overall,indian,0.2
+Sarawak,Sibu,1/1/2022,both,overall,other_citizen,0.6
+Sarawak,Sibu,1/1/2022,both,overall,other_noncitizen,12.3
+Sarawak,Simunjan,1/1/2022,both,overall,bumi_malay,19.8
+Sarawak,Simunjan,1/1/2022,both,overall,bumi_other,13.6
+Sarawak,Simunjan,1/1/2022,both,overall,chinese,0.9
+Sarawak,Simunjan,1/1/2022,both,overall,indian,0
+Sarawak,Simunjan,1/1/2022,both,overall,other_citizen,0.3
+Sarawak,Simunjan,1/1/2022,both,overall,other_noncitizen,2
+Sarawak,Song,1/1/2022,both,overall,bumi_malay,0.5
+Sarawak,Song,1/1/2022,both,overall,bumi_other,9
+Sarawak,Song,1/1/2022,both,overall,chinese,0.5
+Sarawak,Song,1/1/2022,both,overall,indian,0
+Sarawak,Song,1/1/2022,both,overall,other_citizen,0
+Sarawak,Song,1/1/2022,both,overall,other_noncitizen,0
+Sarawak,Sri Aman,1/1/2022,both,overall,bumi_malay,14.2
+Sarawak,Sri Aman,1/1/2022,both,overall,bumi_other,38.3
+Sarawak,Sri Aman,1/1/2022,both,overall,chinese,7.2
+Sarawak,Sri Aman,1/1/2022,both,overall,indian,0
+Sarawak,Sri Aman,1/1/2022,both,overall,other_citizen,0.1
+Sarawak,Sri Aman,1/1/2022,both,overall,other_noncitizen,1.3
+Sarawak,Subis,1/1/2022,both,overall,bumi_malay,6.7
+Sarawak,Subis,1/1/2022,both,overall,bumi_other,33.9
+Sarawak,Subis,1/1/2022,both,overall,chinese,2
+Sarawak,Subis,1/1/2022,both,overall,indian,0
+Sarawak,Subis,1/1/2022,both,overall,other_citizen,0.4
+Sarawak,Subis,1/1/2022,both,overall,other_noncitizen,13.6
+Sarawak,Tanjung Manis,1/1/2022,both,overall,bumi_malay,0.9
+Sarawak,Tanjung Manis,1/1/2022,both,overall,bumi_other,6.4
+Sarawak,Tanjung Manis,1/1/2022,both,overall,chinese,0.1
+Sarawak,Tanjung Manis,1/1/2022,both,overall,indian,0
+Sarawak,Tanjung Manis,1/1/2022,both,overall,other_citizen,0
+Sarawak,Tanjung Manis,1/1/2022,both,overall,other_noncitizen,0.6
+Sarawak,Tatau,1/1/2022,both,overall,bumi_malay,1.4
+Sarawak,Tatau,1/1/2022,both,overall,bumi_other,25.8
+Sarawak,Tatau,1/1/2022,both,overall,chinese,1.3
+Sarawak,Tatau,1/1/2022,both,overall,indian,0
+Sarawak,Tatau,1/1/2022,both,overall,other_citizen,0.2
+Sarawak,Tatau,1/1/2022,both,overall,other_noncitizen,3.2
+Sarawak,Tebedu,1/1/2022,both,overall,bumi_malay,0.6
+Sarawak,Tebedu,1/1/2022,both,overall,bumi_other,23.8
+Sarawak,Tebedu,1/1/2022,both,overall,chinese,0.4
+Sarawak,Tebedu,1/1/2022,both,overall,indian,0
+Sarawak,Tebedu,1/1/2022,both,overall,other_citizen,0
+Sarawak,Tebedu,1/1/2022,both,overall,other_noncitizen,0.4
+Sarawak,Telang Usan,1/1/2022,both,overall,bumi_malay,0.2
+Sarawak,Telang Usan,1/1/2022,both,overall,bumi_other,16.9
+Sarawak,Telang Usan,1/1/2022,both,overall,chinese,0.2
+Sarawak,Telang Usan,1/1/2022,both,overall,indian,0
+Sarawak,Telang Usan,1/1/2022,both,overall,other_citizen,0
+Sarawak,Telang Usan,1/1/2022,both,overall,other_noncitizen,0.1
+Selangor,Gombak,1/1/2022,both,overall,bumi_malay,569.3
+Selangor,Gombak,1/1/2022,both,overall,bumi_other,8
+Selangor,Gombak,1/1/2022,both,overall,chinese,200.6
+Selangor,Gombak,1/1/2022,both,overall,indian,95.7
+Selangor,Gombak,1/1/2022,both,overall,other_citizen,14.8
+Selangor,Gombak,1/1/2022,both,overall,other_noncitizen,61.7
+Selangor,Klang,1/1/2022,both,overall,bumi_malay,539.7
+Selangor,Klang,1/1/2022,both,overall,bumi_other,15.4
+Selangor,Klang,1/1/2022,both,overall,chinese,250.8
+Selangor,Klang,1/1/2022,both,overall,indian,189.8
+Selangor,Klang,1/1/2022,both,overall,other_citizen,7.8
+Selangor,Klang,1/1/2022,both,overall,other_noncitizen,90.6
+Selangor,Kuala Langat,1/1/2022,both,overall,bumi_malay,203.1
+Selangor,Kuala Langat,1/1/2022,both,overall,bumi_other,8.7
+Selangor,Kuala Langat,1/1/2022,both,overall,chinese,54.1
+Selangor,Kuala Langat,1/1/2022,both,overall,indian,32.1
+Selangor,Kuala Langat,1/1/2022,both,overall,other_citizen,1.1
+Selangor,Kuala Langat,1/1/2022,both,overall,other_noncitizen,15.4
+Selangor,Kuala Selangor,1/1/2022,both,overall,bumi_malay,225.4
+Selangor,Kuala Selangor,1/1/2022,both,overall,bumi_other,1.3
+Selangor,Kuala Selangor,1/1/2022,both,overall,chinese,21.7
+Selangor,Kuala Selangor,1/1/2022,both,overall,indian,26.3
+Selangor,Kuala Selangor,1/1/2022,both,overall,other_citizen,0.9
+Selangor,Kuala Selangor,1/1/2022,both,overall,other_noncitizen,12.1
+Selangor,Petaling,1/1/2022,both,overall,bumi_malay,1097.9
+Selangor,Petaling,1/1/2022,both,overall,bumi_other,21.8
+Selangor,Petaling,1/1/2022,both,overall,chinese,762.6
+Selangor,Petaling,1/1/2022,both,overall,indian,211.6
+Selangor,Petaling,1/1/2022,both,overall,other_citizen,16.6
+Selangor,Petaling,1/1/2022,both,overall,other_noncitizen,194.4
+Selangor,Sabak Bernam,1/1/2022,both,overall,bumi_malay,79.5
+Selangor,Sabak Bernam,1/1/2022,both,overall,bumi_other,0.3
+Selangor,Sabak Bernam,1/1/2022,both,overall,chinese,19.9
+Selangor,Sabak Bernam,1/1/2022,both,overall,indian,4
+Selangor,Sabak Bernam,1/1/2022,both,overall,other_citizen,0.3
+Selangor,Sabak Bernam,1/1/2022,both,overall,other_noncitizen,3.9
+Selangor,Sepang,1/1/2022,both,overall,bumi_malay,203.4
+Selangor,Sepang,1/1/2022,both,overall,bumi_other,6.1
+Selangor,Sepang,1/1/2022,both,overall,chinese,58.8
+Selangor,Sepang,1/1/2022,both,overall,indian,30.8
+Selangor,Sepang,1/1/2022,both,overall,other_citizen,3
+Selangor,Sepang,1/1/2022,both,overall,other_noncitizen,29.5
+Selangor,Ulu Langat,1/1/2022,both,overall,bumi_malay,816.6
+Selangor,Ulu Langat,1/1/2022,both,overall,bumi_other,15.4
+Selangor,Ulu Langat,1/1/2022,both,overall,chinese,363.2
+Selangor,Ulu Langat,1/1/2022,both,overall,indian,106.3
+Selangor,Ulu Langat,1/1/2022,both,overall,other_citizen,9.3
+Selangor,Ulu Langat,1/1/2022,both,overall,other_noncitizen,102.5
+Selangor,Ulu Selangor,1/1/2022,both,overall,bumi_malay,173.2
+Selangor,Ulu Selangor,1/1/2022,both,overall,bumi_other,5.2
+Selangor,Ulu Selangor,1/1/2022,both,overall,chinese,26
+Selangor,Ulu Selangor,1/1/2022,both,overall,indian,31
+Selangor,Ulu Selangor,1/1/2022,both,overall,other_citizen,1.2
+Selangor,Ulu Selangor,1/1/2022,both,overall,other_noncitizen,9.8
+Terengganu,Besut,1/1/2022,both,overall,bumi_malay,153.8
+Terengganu,Besut,1/1/2022,both,overall,bumi_other,0.3
+Terengganu,Besut,1/1/2022,both,overall,chinese,1.3
+Terengganu,Besut,1/1/2022,both,overall,indian,0.1
+Terengganu,Besut,1/1/2022,both,overall,other_citizen,0.5
+Terengganu,Besut,1/1/2022,both,overall,other_noncitizen,3.4
+Terengganu,Dungun,1/1/2022,both,overall,bumi_malay,155.3
+Terengganu,Dungun,1/1/2022,both,overall,bumi_other,0.3
+Terengganu,Dungun,1/1/2022,both,overall,chinese,3.3
+Terengganu,Dungun,1/1/2022,both,overall,indian,0.1
+Terengganu,Dungun,1/1/2022,both,overall,other_citizen,0.3
+Terengganu,Dungun,1/1/2022,both,overall,other_noncitizen,3.2
+Terengganu,Hulu Terengganu,1/1/2022,both,overall,bumi_malay,67
+Terengganu,Hulu Terengganu,1/1/2022,both,overall,bumi_other,0.6
+Terengganu,Hulu Terengganu,1/1/2022,both,overall,chinese,0.2
+Terengganu,Hulu Terengganu,1/1/2022,both,overall,indian,0
+Terengganu,Hulu Terengganu,1/1/2022,both,overall,other_citizen,0.3
+Terengganu,Hulu Terengganu,1/1/2022,both,overall,other_noncitizen,4.2
+Terengganu,Kemaman,1/1/2022,both,overall,bumi_malay,203.9
+Terengganu,Kemaman,1/1/2022,both,overall,bumi_other,0.9
+Terengganu,Kemaman,1/1/2022,both,overall,chinese,7.8
+Terengganu,Kemaman,1/1/2022,both,overall,indian,0.7
+Terengganu,Kemaman,1/1/2022,both,overall,other_citizen,0.3
+Terengganu,Kemaman,1/1/2022,both,overall,other_noncitizen,8
+Terengganu,Kuala Nerus,1/1/2022,both,overall,bumi_malay,145.7
+Terengganu,Kuala Nerus,1/1/2022,both,overall,bumi_other,0.4
+Terengganu,Kuala Nerus,1/1/2022,both,overall,chinese,1.8
+Terengganu,Kuala Nerus,1/1/2022,both,overall,indian,0.5
+Terengganu,Kuala Nerus,1/1/2022,both,overall,other_citizen,0.2
+Terengganu,Kuala Nerus,1/1/2022,both,overall,other_noncitizen,2.5
+Terengganu,Kuala Terengganu,1/1/2022,both,overall,bumi_malay,224.1
+Terengganu,Kuala Terengganu,1/1/2022,both,overall,bumi_other,0.5
+Terengganu,Kuala Terengganu,1/1/2022,both,overall,chinese,7.1
+Terengganu,Kuala Terengganu,1/1/2022,both,overall,indian,0.5
+Terengganu,Kuala Terengganu,1/1/2022,both,overall,other_citizen,0.3
+Terengganu,Kuala Terengganu,1/1/2022,both,overall,other_noncitizen,4.2
+Terengganu,Marang,1/1/2022,both,overall,bumi_malay,117.9
+Terengganu,Marang,1/1/2022,both,overall,bumi_other,0.2
+Terengganu,Marang,1/1/2022,both,overall,chinese,1.5
+Terengganu,Marang,1/1/2022,both,overall,indian,0
+Terengganu,Marang,1/1/2022,both,overall,other_citizen,0.2
+Terengganu,Marang,1/1/2022,both,overall,other_noncitizen,1.7
+Terengganu,Setiu,1/1/2022,both,overall,bumi_malay,59.8
+Terengganu,Setiu,1/1/2022,both,overall,bumi_other,0.1
+Terengganu,Setiu,1/1/2022,both,overall,chinese,0.1
+Terengganu,Setiu,1/1/2022,both,overall,indian,0
+Terengganu,Setiu,1/1/2022,both,overall,other_citizen,0.1
+Terengganu,Setiu,1/1/2022,both,overall,other_noncitizen,1.4
+W.P. Kuala Lumpur,W.P. Kuala Lumpur,1/1/2022,both,overall,bumi_malay,837.2
+W.P. Kuala Lumpur,W.P. Kuala Lumpur,1/1/2022,both,overall,bumi_other,19.9
+W.P. Kuala Lumpur,W.P. Kuala Lumpur,1/1/2022,both,overall,chinese,730.7
+W.P. Kuala Lumpur,W.P. Kuala Lumpur,1/1/2022,both,overall,indian,177
+W.P. Kuala Lumpur,W.P. Kuala Lumpur,1/1/2022,both,overall,other_citizen,12.7
+W.P. Kuala Lumpur,W.P. Kuala Lumpur,1/1/2022,both,overall,other_noncitizen,183.6
+W.P. Labuan,W.P. Labuan,1/1/2022,both,overall,bumi_malay,34.9
+W.P. Labuan,W.P. Labuan,1/1/2022,both,overall,bumi_other,39.9
+W.P. Labuan,W.P. Labuan,1/1/2022,both,overall,chinese,9.7
+W.P. Labuan,W.P. Labuan,1/1/2022,both,overall,indian,0.9
+W.P. Labuan,W.P. Labuan,1/1/2022,both,overall,other_citizen,1.1
+W.P. Labuan,W.P. Labuan,1/1/2022,both,overall,other_noncitizen,10.3
+W.P. Putrajaya,W.P. Putrajaya,1/1/2022,both,overall,bumi_malay,108.7
+W.P. Putrajaya,W.P. Putrajaya,1/1/2022,both,overall,bumi_other,2.3
+W.P. Putrajaya,W.P. Putrajaya,1/1/2022,both,overall,chinese,0.6
+W.P. Putrajaya,W.P. Putrajaya,1/1/2022,both,overall,indian,1.4
+W.P. Putrajaya,W.P. Putrajaya,1/1/2022,both,overall,other_citizen,0.3
+W.P. Putrajaya,W.P. Putrajaya,1/1/2022,both,overall,other_noncitizen,3.7
