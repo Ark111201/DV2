@@ -170,9 +170,8 @@
           }
         },
         {
-          "comment": "--- STACKED BAR: HOSPITAL TYPE DETAIL (Colorblind Adjusted) ---",
-          "width": 350, "height": 400, 
-          "title": { "text": { "signal": "S_DISTRICT.pop_lookup_name ? 'Hospital Types in ' + S_DISTRICT.pop_lookup_name : 'Select a District'" } },
+          "comment": "--- STACKED BAR: HOSPITAL TYPE DETAIL ---",
+          "width": 350, "height": 400, "title": { "text": { "signal": "S_DISTRICT.pop_lookup_name ? 'Hospital Types in ' + S_DISTRICT.pop_lookup_name : 'Select a District'" } },
           "data": { "url": "https://raw.githubusercontent.com/Ark111201/DV2/refs/heads/main/data/hospital_beds_2022(withtype).csv" },
           "transform": [
             { "calculate": "datum.district == 'Hulu Langat (Bangi)' ? 'Ulu Langat' : datum.district == 'Hulu Selangor' ? 'Ulu Selangor' : datum.district == 'Batang Padang (Tapah)' ? 'Batang Padang' : datum.district == 'Gombak (Rawang)' ? 'Gombak' : datum.district == 'Kinta (Ipoh)' ? 'Kinta' : datum.district == 'Larut & Matang (Taiping)' ? 'Larut Dan Matang' : datum.district == 'Manjung (Sitiawan)' ? 'Manjung' : datum.district == 'Petaling (Subang Jaya)' ? 'Petaling' : datum.district == 'Seberang Perai Utara (Butterworth)' ? 'Seberang Perai Utara' : datum.district == 'Timur Laut (Georgetown)' ? 'Timur Laut' : datum.district == 'Ledang' ? 'Tangkak' : datum.district == 'Kulaijaya' ? 'Kulai' : datum.district", "as": "pop_lookup_name" },
@@ -181,39 +180,60 @@
           "mark": "bar",
           "encoding": {
             "x": { "aggregate": "sum", "field": "beds", "type": "quantitative", "title": "Bed Capacity" },
-            "color": { 
-              "field": "type", "type": "nominal", 
-              "scale": { "range": ["#1f77b4", "#ff7f0e", "#7f7f7f"] }, 
-              "legend": { "orient": "bottom", "title": "Type" } 
-            },
-            "tooltip": [ 
-              { "field": "type", "type": "nominal", "title": "Type" }, 
-              { "field": "beds", "aggregate": "sum", "type": "quantitative", "title": "Total Beds", "format": ",d" } 
-            ]
+            "color": { "field": "type", "type": "nominal", "scale": { "range": ["#1f77b4", "#ff7f0e", "#7f7f7f"] }, "legend": { "orient": "bottom", "title": "Type" } },
+            "tooltip": [ { "field": "type", "type": "nominal", "title": "Type" }, { "field": "beds", "aggregate": "sum", "type": "quantitative", "title": "Total Beds", "format": ",d" } ]
           }
         }
       ]
     },
     {
-      "comment": "--- BUTTERFLY CHART ---",
+      "comment": "--- FINAL SECTION: NATIONALITY BUTTERFLY ---",
       "width": 1050, "height": 300,
+      "title": { 
+        "text": { "signal": "S_STATE.state ? 'Nationality Distribution in ' + S_STATE.state : 'Select a State on map to see Nationality Distribution'" }, 
+        "anchor": "start", "fontSize": 16 
+      },
       "data": { "url": "https://raw.githubusercontent.com/Ark111201/DV2/refs/heads/main/data/population_district_2022_(comparson_citizen_noncitizen).csv" },
       "transform": [
         { "filter": "datum.sex == 'both' && datum.age == 'overall'" },
         { "calculate": "datum.district", "as": "pop_lookup_name" },
-        { "filter": { "param": "S_STATE", "fields": ["state"] } },
+        { "filter": { "param": "S_STATE", "empty": false, "fields": ["state"] } },
         { "calculate": "indexof(['bumi_malay', 'bumi_other', 'chinese', 'indian', 'other_citizen'], datum.ethnicity) != -1 ? 'Citizens' : 'Non-citizens'", "as": "group" },
         { "aggregate": [{"op": "sum", "field": "population", "as": "sum_pop"}], "groupby": ["pop_lookup_name", "group"] },
         { "calculate": "datum.group == 'Citizens' ? -datum.sum_pop : datum.sum_pop", "as": "pop_butterfly" }
       ],
-      "mark": "bar",
+      "mark": { "type": "bar", "stroke": "black" },
       "encoding": {
-        "y": { "field": "pop_lookup_name", "type": "nominal", "axis": { "minExtent": 180 }, "sort": "-x" },
-        "x": { "field": "pop_butterfly", "type": "quantitative", "axis": { "labelExpr": "abs(datum.value)" } },
-        "color": { "condition": { "param": "S_DISTRICT", "empty": false, "value": "#b7282d" }, "field": "group" }
+        "y": { "field": "pop_lookup_name", "type": "nominal", "axis": { "minExtent": 180, "labelLimit": 300 }, "sort": "-x", "title": "District" },
+        "x": { "field": "pop_butterfly", "type": "quantitative", "axis": { "labelExpr": "abs(datum.value)" }, "title": "Population ('000)" },
+        "color": {
+          "field": "group", "type": "nominal",
+          "scale": { "domain": ["Citizens", "Non-citizens"], "range": ["#5B7B9C", "#ff7f0e"] },
+          "legend": {
+            "title": "Group", "orient": "bottom",
+            "comment": "★修正箇所: アイコンの透明度を1に固定し、選択中も消えないようにしました",
+            "symbolOpacity": 1,
+            "symbolStrokeWidth": 0
+          }
+        },
+        "opacity": { "condition": { "param": "S_DISTRICT", "value": 1 }, "value": 0.3 },
+        "strokeWidth": { "condition": { "param": "S_DISTRICT", "value": 1.5 }, "value": 0 },
+        "tooltip": [ 
+          {"field": "pop_lookup_name", "type": "nominal", "title": "District"}, 
+          {"field": "group", "type": "nominal", "title": "Group"}, 
+          {"field": "sum_pop", "type": "quantitative", "title": "Population ('000)", "format": ".1f"} 
+        ]
       }
     }
   ],
-  "resolve": { "selection": { "S_STATE": "global", "S_DISTRICT": "global" } },
-  "config": { "view": {"stroke": null}, "axis": {"grid": false}, "autosize": {"type": "fit", "contains": "padding"} }
+  "resolve": { 
+    "selection": { "S_STATE": "global", "S_DISTRICT": "global" },
+    "scale": { "color": "independent" } 
+  },
+  "config": {
+    "view": {"stroke": null},
+    "axis": {"grid": false},
+    "text": {"font": "sans-serif"},
+    "autosize": {"type": "fit", "contains": "padding"}
+  }
 }
