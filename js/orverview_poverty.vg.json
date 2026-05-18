@@ -1,0 +1,90 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Historical Trend of Absolute Poverty Rates by State (1970-2022)",
+    "fontSize": 20,
+    "anchor": "start",
+    "font": "sans-serif",
+    "subtitle": "Dramatic reduction in poverty levels across Malaysia. Hover over points for data."
+  },
+  "width": 1050,
+  "height": 350,
+  "data": {
+    "url": "https://raw.githubusercontent.com/Ark111201/DV2/refs/heads/main/data/hh_poverty_state(with_poverty_absolute).csv",
+    "format": {
+      "type": "csv",
+      "parse": {"date": "date:'%d/%m/%Y'"}
+    }
+  },
+  "layer": [
+    {
+      "comment": "--- MAIN LINES AND POINTS ---",
+      "mark": {
+        "type": "line",
+        "interpolate": "monotone",
+        "strokeWidth": 2,
+        "point": {"filled": true, "size": 40}
+      },
+      "encoding": {
+        "x": {
+          "field": "date",
+          "type": "temporal",
+          "title": "Year",
+          "axis": {"grid": false, "format": "%Y", "tickCount": 10}
+        },
+        "y": {
+          "field": "poverty_absolute",
+          "type": "quantitative",
+          "title": "Absolute Poverty Rate (%)"
+        },
+        "color": {
+          "field": "state",
+          "type": "nominal",
+          "title": "State",
+          "comment": "★修正点: 赤・緑の混同を避け、色のコントラストが強いパレットを採用",
+          "scale": {"scheme": "tableau20"}
+        },
+        "tooltip": [
+          {"field": "state", "type": "nominal", "title": "State"},
+          {"field": "date", "type": "temporal", "timeUnit": "year", "title": "Year"},
+          {"field": "poverty_absolute", "type": "quantitative", "title": "Poverty (%)", "format": ".1f"}
+        ]
+      }
+    },
+    {
+      "comment": "--- LABELS FOR HIGHEST POVERTY STATES IN 2022 (Optional/Simplified) ---",
+      "transform": [
+        {
+          "window": [{"op": "rank", "as": "rank"}],
+          "sort": [{"field": "date", "order": "descending"}],
+          "groupby": ["state"]
+        },
+        {"filter": "datum.rank === 1"},
+        {"comment": "2022年時点で poverty_absolute が 10% 以上の州だけラベルを表示して重なりを回避", "filter": "datum.poverty_absolute > 10"}
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 10,
+        "fontSize": 12,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "x": {"field": "date", "type": "temporal"},
+        "y": {"field": "poverty_absolute", "type": "quantitative"},
+        "text": {"field": "state", "type": "nominal"},
+        "color": {"field": "state", "type": "nominal"}
+      }
+    }
+  ],
+  "config": {
+    "view": {"stroke": null},
+    "axis": {"labelFont": "sans-serif", "titleFont": "sans-serif"},
+    "legend": {
+      "orient": "right",
+      "columns": 1,
+      "labelFontSize": 12,
+      "symbolStrokeWidth": 2
+    }
+  }
+}
