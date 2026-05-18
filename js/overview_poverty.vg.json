@@ -1,0 +1,61 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Historical Trend of Absolute Poverty Rates by State (1970-2022)",
+    "fontSize": 20, "anchor": "start", "font": "sans-serif",
+    "subtitle": "Click on a state in the legend to highlight its trend. Data from DOSM."
+  },
+  "width": 900,
+  "height": 350,
+  "data": {
+    "url": "https://raw.githubusercontent.com/Ark111201/DV2/refs/heads/main/data/hh_poverty_state(with_poverty_absolute).csv",
+    "format": { "type": "csv", "parse": {"date": "date:'%d/%m/%Y'"} }
+  },
+  "layer": [
+    {
+      "comment": "--- 1. 折れ線と点（ここでパラメーターを定義） ---",
+      "params": [
+        {
+          "name": "HIST_POV_SELECTOR",
+          "select": {"type": "point", "fields": ["state"]},
+          "bind": "legend"
+        }
+      ],
+      "mark": { "type": "line", "interpolate": "monotone", "strokeWidth": 2.5, "point": {"filled": true, "size": 40} },
+      "encoding": {
+        "x": { "field": "date", "type": "temporal", "title": "Year", "axis": {"grid": false, "format": "%Y"} },
+        "y": { "field": "poverty_absolute", "type": "quantitative", "title": "Poverty Rate (%)" },
+        "color": { "field": "state", "type": "nominal", "scale": {"scheme": "tableau20"} },
+        "opacity": { "condition": {"param": "HIST_POV_SELECTOR", "value": 1}, "value": 0.1 },
+        "tooltip": [
+          {"field": "state", "type": "nominal", "title": "State"},
+          {"field": "date", "type": "temporal", "timeUnit": "year", "title": "Year"},
+          {"field": "poverty_absolute", "type": "quantitative", "title": "Poverty (%)", "format": ".1f"}
+        ]
+      }
+    },
+    {
+      "comment": "--- 2. 右端のテキストラベル ---",
+      "transform": [
+        { "window": [{"op": "rank", "as": "rank"}], "sort": [{"field": "date", "order": "descending"}], "groupby": ["state"] },
+        { "filter": "datum.rank === 1 && datum.poverty_absolute > 10" }
+      ],
+      "mark": { "type": "text", "align": "left", "dx": 10, "fontWeight": "bold" },
+      "encoding": {
+        "x": {"field": "date", "type": "temporal"},
+        "y": {"field": "poverty_absolute", "type": "quantitative"},
+        "text": {"field": "state", "type": "nominal"},
+        "color": {"field": "state", "type": "nominal"},
+        "opacity": { "condition": {"param": "HIST_POV_SELECTOR", "value": 1}, "value": 0 }
+      }
+    }
+  ],
+  "resolve": {
+    "selection": { "HIST_POV_SELECTOR": "global" }
+  },
+  "config": {
+    "view": {"stroke": null},
+    "axis": {"labelFont": "sans-serif"},
+    "legend": { "columns": 2, "orient": "right", "labelFontSize": 11 }
+  }
+}
