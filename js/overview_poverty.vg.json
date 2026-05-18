@@ -3,7 +3,7 @@
   "title": {
     "text": "Historical Trend of Absolute Poverty Rates by State (1970-2022)",
     "fontSize": 20, "anchor": "start", "font": "sans-serif",
-    "subtitle": "Click on a state in the legend to highlight its trend. Data from DOSM."
+    "subtitle": "Click on a state in the legend to highlight its trend."
   },
   "width": 900,
   "height": 350,
