@@ -12,10 +12,10 @@
       "comment": "--- UPPER SECTION: MAP & PYRAMID ---",
       "title": {
         "text": "1. Geographic Healthcare Access & Population Structure",
-        "dx": -95,
+        "dx": -92,
         "subtitle": [
-          "Insight: Red areas indicate districts with critical bed shortages (less than 5 beds per 10k people).",
-          "The population pyramid helps identify if a district needs more geriatric or pediatric support."
+          "Red areas indicate zero hospital beds per 10,000 people, meaning these districts have no hospitals with inpatient bed facilities.",
+          "The population pyramid displays the age and gender distribution for the specific district selected on the map."
         ],
         "fontSize": 18, "subtitleFontSize": 13, "subtitleFontStyle": "italic", "anchor": "start", "offset": 15
       },
@@ -106,8 +106,8 @@
       "title": {
         "text": { "signal": "S_STATE.state ? '2. Income Comparison in ' + S_STATE.state : '2. Household Income by District'" },
         "subtitle": [
-          "Insight: Districts with income below the national average (RM 8,479) often face higher barriers",
-          "to private healthcare, relying heavily on subsidized public infrastructure."
+          "Please select a district on the map to visualize.", 
+          " This chart shows household incomes for the selected district and others in its state. The selected district is highlighted in red, with the national average being RM 8,479."
         ],
         "fontSize": 18, "subtitleFontSize": 13, "subtitleFontStyle": "italic", "anchor": "start", "offset": 15
       },
@@ -159,8 +159,9 @@
         "text": "3. Poverty Correlation & Hospital Infrastructure Detail",
         "dx": -60,
         "subtitle": [
-          "Insight: Higher poverty rates generally correlate with fewer hospital beds.",
-          "The stacked bar reveals the balance between public services and private facilities."
+          "Please select a district on the map to visualize.", 
+          "This section visualizes the correlation between poverty rates and healthcare infrastructure, highlighting the selected district in red. ",
+          "It also shows the breakdown of beds across public, private, and special medical institutions."
         ],
         "fontSize": 18, "subtitleFontSize": 13, "subtitleFontStyle": "italic", "anchor": "start", "offset": 15
       },
@@ -203,7 +204,14 @@
           "mark": "bar",
           "encoding": {
             "x": { "aggregate": "sum", "field": "beds", "type": "quantitative", "title": "Bed Capacity" },
-            "color": { "field": "type", "type": "nominal", "scale": { "range": ["#1f77b4", "#ff7f0e", "#7f7f7f"] }, "legend": { "orient": "bottom", "title": "Hospital Type" } },
+            "color": {
+               "field": "type", 
+               "type": "nominal", 
+               "scale": { 
+                "domain": ["hospital_moh", "hospital_non_moh", "special_medical_institution"],
+                "range": ["#1f77b4", "#ff7f0e", "#7f7f7f"]}, 
+              "legend": { "orient": "none", "title": "Hospital Type", "direction": "horizontal", "legendX": 630, "legendY": 450} 
+              },
             "tooltip": [ { "field": "type", "type": "nominal", "title": "Hospital Type" }, { "field": "beds", "aggregate": "sum", "type": "quantitative", "title": "Total Beds", "format": ",d" } ]
           }
         }
@@ -215,8 +223,8 @@
       "title": {
         "text": { "signal": "S_STATE.state ? '4. Nationality Distribution in ' + S_STATE.state : '4. Nationality Distribution'" },
         "subtitle": [
-          "Insight: Districts with high non-citizen populations face unique healthcare challenges,",
-          "as these groups often lack access to fully subsidized government medical rates."
+          "Please select a district on the map to visualize.", 
+          "This chart shows the distribution of citizens and non-citizens for the selected district and its state. The selected district is highlighted for easy comparison."
         ],
         "fontSize": 18, "subtitleFontSize": 13, "subtitleFontStyle": "italic", "anchor": "start", "offset": 15
       },
@@ -225,9 +233,9 @@
         { "filter": "datum.sex == 'both' && datum.age == 'overall'" },
         { "calculate": "datum.district", "as": "pop_lookup_name" },
         { "filter": { "param": "S_STATE", "empty": false, "fields": ["state"] } },
-        { "calculate": "indexof(['bumi_malay', 'bumi_other', 'chinese', 'indian', 'other_citizen'], datum.ethnicity) != -1 ? 'Citizens' : 'Non-citizens'", "as": "group" },
+        { "calculate": "indexof(['bumi_malay', 'bumi_other', 'chinese', 'indian', 'other_citizen'], datum.ethnicity) != -1 ? 'Malaysian' : 'Foreigner'", "as": "group" },
         { "aggregate": [{"op": "sum", "field": "population", "as": "sum_pop"}], "groupby": ["pop_lookup_name", "group"] },
-        { "calculate": "datum.group == 'Citizens' ? -datum.sum_pop : datum.sum_pop", "as": "pop_butterfly" }
+        { "calculate": "datum.group == 'Malaysian' ? -datum.sum_pop : datum.sum_pop", "as": "pop_butterfly" }
       ],
       "mark": { "type": "bar", "stroke": "black" },
       "encoding": {
@@ -235,10 +243,9 @@
         "x": { "field": "pop_butterfly", "type": "quantitative", "axis": { "labelExpr": "abs(datum.value)" }, "title": "Population ('000)" },
         "color": {
           "field": "group", "type": "nominal",
-          "scale": { "domain": ["Citizens", "Non-citizens"], "range": ["#5B7B9C", "#ff7f0e"] },
+          "scale": { "domain": ["Malaysian", "Foreigner"], "range": ["#5B7B9C", "#ff7f0e"] },
           "legend": {
-            "title": "Group", "orient": "bottom",
-            "comment": "★修正箇所: アイコンの透明度を1に固定し、選択中も消えないようにしました",
+            "title": "Nationality", "orient": "bottom",
             "symbolOpacity": 1,
             "symbolStrokeWidth": 0
           }
@@ -247,7 +254,7 @@
         "strokeWidth": { "condition": { "param": "S_DISTRICT", "value": 1.5 }, "value": 0 },
         "tooltip": [ 
           {"field": "pop_lookup_name", "type": "nominal", "title": "District"}, 
-          {"field": "group", "type": "nominal", "title": "Group"}, 
+          {"field": "group", "type": "nominal", "title": "Nationality"}, 
           {"field": "sum_pop", "type": "quantitative", "title": "Population ('000)", "format": ".1f"} 
         ]
       }
