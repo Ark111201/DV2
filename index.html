@@ -1,59 +1,59 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Malaysia Healthcare Dashboard - Debug Version</title>
-    
-    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
-    
-    <style>
-        body { font-family: sans-serif; background-color: #f4f4f9; padding: 20px; }
-        .chart-container { background: white; padding: 20px; border-radius: 8px; margin-bottom: 30px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        h1, h2 { color: #333; }
-        #poverty_overview, #vis { width: 100%; min-height: 400px; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Malaysia Healthcare & Socio-Economic Dashboard</title>
+  
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+  
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <h1>Malaysia Healthcare & Socio-Economic Analysis</h1>
-
-    <div class="chart-container">
-        <h2>Historical Poverty Trend</h2>
-        <div id="poverty_overview"></div>
+  <div class="page">
+    
+    <div class="header">
+      <h1>Malaysia Healthcare Accessibility & Socio-Economic Dashboard</h1>
+      <p>This dashboard explores healthcare accessibility across Malaysia. By analyzing hospital infrastructure alongside historical poverty trends, household income, and demographic diversity, it reveals the complex social factors that shape medical equity in malaysian society.</p>
     </div>
 
-    <div class="chart-container">
-        <h2>Interactive Healthcare Dashboard</h2>
-        <div id="vis"></div>
+    <div class="section">
+      <h2>Chapter 1: The History of Poverty Reduction (1970 - 2022)</h2>
+      <div class="pure-g">
+        <div class="pure-u-1-1">
+          <div id="overview_vis" class="vis-container"></div>
+        </div>
+      </div>
+      <div class="insights">
+        <p><strong>Insight:</strong> In 1970, the absolute poverty rate of most regions exceeded 40%, but it decreased dramatically over 50 years, indicating national economic growth. However, some regions still face significant challenges like Sabah.</p>
+      </div>
     </div>
 
-    <script type="text/javascript">
-        // --- 設定 ---
-        var specHistory = "js/overview_poverty.vg.json";
-        var specMain = "js/dashboard.vg.json";
+    <div class="section">
+      <h2>Chapter 2: Geographic Disparities and Population Structure</h2>
+      <div class="pure-g">
+        <div class="pure-u-1-1">
+          <div id="main_dashboard_vis" class="vis-container"></div>
+        </div>
+      </div>
+    </div>
 
-        // --- 1. 歴史グラフの描画 ---
-        console.log("HISTORY: Rendering attempt start..."); 
-        vegaEmbed('#poverty_overview', specHistory, { "renderer": "svg", "actions": false })
-            .then(function(result) {
-                console.log("HISTORY: Rendering successful!");
-            })
-            .catch(function(error) {
-                console.error("HISTORY Error:", error);
-            });
+    <div class="footer">
+      <p>Created by Koki Arai  | Data Source: Department of Statistics Malaysia (DOSM)</p>
+    </div>
 
-        // --- 2. メインダッシュボードの描画 ---
-        console.log("MAIN: Rendering attempt start...");
-        vegaEmbed('#vis', specMain, { "renderer": "svg", "actions": false })
-            .then(function(result) {
-                console.log("MAIN: Rendering successful!");
-            })
-            .catch(function(error) {
-                console.error("MAIN Error:", error);
-            });
-    </script>
+  </div>
+
+  <script type="text/javascript">
+    // Load Overview Chart
+    vegaEmbed('#overview_vis', 'js/overview_poverty.vg.json').catch(console.error);
+    
+    // Load Main Dashboard
+    vegaEmbed('#main_dashboard_vis', 'js/dashboard.vg.json').catch(console.error);
+  </script>
 </body>
 </html>
