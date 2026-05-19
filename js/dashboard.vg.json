@@ -4,11 +4,21 @@
     "text": "Malaysia Healthcare Accessibility & Socio-Economic Dashboard (2022)",
     "fontSize": 20,
     "anchor": "start",
-    "font": "sans-serif"
+    "font": "sans-serif",
+    "offset": 40
   },
   "vconcat": [
     {
       "comment": "--- UPPER SECTION: MAP & PYRAMID ---",
+      "title": {
+        "text": "1. Geographic Healthcare Access & Population Structure",
+        "dx": -95,
+        "subtitle": [
+          "Insight: Red areas indicate districts with critical bed shortages (less than 5 beds per 10k people).",
+          "The population pyramid helps identify if a district needs more geriatric or pediatric support."
+        ],
+        "fontSize": 18, "subtitleFontSize": 13, "subtitleFontStyle": "italic", "anchor": "start", "offset": 15
+      },
       "hconcat": [
         {
           "comment": "--- LEFT SIDE: DISTRICT MAP ---",
@@ -94,8 +104,12 @@
     {
       "comment": "--- MIDDLE SECTION: INCOME LOLLIPOP (UPDATED) ---",
       "title": {
-        "text": { "signal": "S_STATE.state ? 'Income Comparison in ' + S_STATE.state : 'Household Income (Select a State on map)'" },
-        "anchor": "start", "fontSize": 16
+        "text": { "signal": "S_STATE.state ? '2. Income Comparison in ' + S_STATE.state : '2. Household Income by District'" },
+        "subtitle": [
+          "Insight: Districts with income below the national average (RM 8,479) often face higher barriers",
+          "to private healthcare, relying heavily on subsidized public infrastructure."
+        ],
+        "fontSize": 18, "subtitleFontSize": 13, "subtitleFontStyle": "italic", "anchor": "start", "offset": 15
       },
       "width": 1050, "height": 350,
       "data": { "url": "https://raw.githubusercontent.com/Ark111201/DV2/refs/heads/main/data/hh_income_district(2022).csv" },
@@ -141,6 +155,15 @@
     },
     {
       "comment": "--- HOSPITAL TYPES & SCATTER ---",
+      "title": {
+        "text": "3. Poverty Correlation & Hospital Infrastructure Detail",
+        "dx": -60,
+        "subtitle": [
+          "Insight: Higher poverty rates generally correlate with fewer hospital beds.",
+          "The stacked bar reveals the balance between public services and private facilities."
+        ],
+        "fontSize": 18, "subtitleFontSize": 13, "subtitleFontStyle": "italic", "anchor": "start", "offset": 15
+      },
       "hconcat": [
         {
           "comment": "--- SCATTER PLOT ---",
@@ -189,9 +212,13 @@
     {
       "comment": "--- FINAL SECTION: NATIONALITY BUTTERFLY ---",
       "width": 1050, "height": 350,
-      "title": { 
-        "text": { "signal": "S_STATE.state ? 'Nationality Distribution in ' + S_STATE.state : 'Select a State on map to see Nationality Distribution'" }, 
-        "anchor": "start", "fontSize": 16 
+      "title": {
+        "text": { "signal": "S_STATE.state ? '4. Nationality Distribution in ' + S_STATE.state : '4. Nationality Distribution'" },
+        "subtitle": [
+          "Insight: Districts with high non-citizen populations face unique healthcare challenges,",
+          "as these groups often lack access to fully subsidized government medical rates."
+        ],
+        "fontSize": 18, "subtitleFontSize": 13, "subtitleFontStyle": "italic", "anchor": "start", "offset": 15
       },
       "data": { "url": "https://raw.githubusercontent.com/Ark111201/DV2/refs/heads/main/data/population_district_2022_(comparson_citizen_noncitizen).csv" },
       "transform": [
@@ -226,15 +253,19 @@
       }
     }
   ],
-  "resolve": { 
-    "selection": { "S_STATE": "global", "S_DISTRICT": "global" },
-    "scale": { "color": "independent" } 
-  },
+
+  "spacing": 80,
+
+  "resolve": { "selection": { "S_STATE": "global", "S_DISTRICT": "global" }, "scale": { "color": "independent" } },
   "config": {
     "view": {"stroke": null},
     "axis": {"grid": false},
     "text": {"font": "sans-serif"},
-    "autosize": {"type": "fit", "contains": "padding"}
+    "autosize": {"type": "fit", "contains": "padding"},
+    "title": {
+      "subtitlePadding": 10,
+      "subtitleColor": "#444"
+    }
   }
 }
 
