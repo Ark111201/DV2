@@ -104,19 +104,26 @@
     {
       "comment": "--- MIDDLE SECTION: INCOME LOLLIPOP (UPDATED) ---",
       "title": {
-        "text": { "signal": "S_STATE.state ? '2. Income Comparison in ' + S_STATE.state : '2. Household Income by District'" },
-        "subtitle": [
-          "Please select a district on the map to visualize.", 
-          " This chart shows household incomes for the selected district and others in its state. The selected district is highlighted in red, with the national average being RM 8,479."
-        ],
+        "text": {
+          "comment": "★修正ポイント：未選択時はSelangorがベースラインとして表示されていることを明記",
+          "signal": "S_STATE.state ? '2. Income Comparison in ' + S_STATE.state : '2. Income Comparison (Selangor Baseline)'"
+        },
+        "subtitle": {
+          "comment": "★修正ポイント：未選択時と選択時で説明文を完全に切り替える",
+          "signal": "S_STATE.state ? ['Showing household incomes for districts within ' + S_STATE.state + '.', 'The selected district is highlighted in red, with the national average being RM 8,479.'] : ['Please select a state or district on the map to visualize its region.', 'Currently displaying Selangor as a baseline for comparison. National average is RM 8,479.']"
+        },
         "fontSize": 18, "subtitleFontSize": 13, "subtitleFontStyle": "italic", "anchor": "start", "offset": 15
       },
       "width": 1050, "height": 350,
       "data": { "url": "https://raw.githubusercontent.com/Ark111201/DV2/refs/heads/main/data/hh_income_district(2022).csv" },
+      
       "transform": [
         { "calculate": "datum.district", "as": "pop_lookup_name" },
         { "filter": "datum.state != 'Malaysia'" },
-        { "filter": {"param": "S_STATE", "empty": false, "fields": ["state"]} }
+        { 
+          "comment": "地図で未選択ならSelangorを、選択されていればその州をフィルターするロジック",
+          "filter": "S_STATE.state ? datum.state == S_STATE.state : datum.state == 'Selangor'" 
+        }
       ],
       "layer": [
         {
@@ -195,11 +202,16 @@
         },
         {
           "comment": "--- STACKED BAR: HOSPITAL TYPE DETAIL ---",
-          "width": 350, "height": 400, "title": { "text": { "signal": "S_DISTRICT.pop_lookup_name ? 'Hospital Types in ' + S_DISTRICT.pop_lookup_name : 'Select a District'" } },
+          "width": 350, "height": 400, "title": {
+          "text": {
+            "comment": "★修正ポイント：未選択時はマレーシア全土(Total)の表記に動的に切り替える",
+            "signal": "S_DISTRICT.pop_lookup_name ? 'Hospital Types in ' + S_DISTRICT.pop_lookup_name : 'Hospital Types Across Malaysia (Total)'"
+          }
+  },
           "data": { "url": "https://raw.githubusercontent.com/Ark111201/DV2/refs/heads/main/data/hospital_beds_2022(withtype).csv" },
           "transform": [
             { "calculate": "datum.district == 'Hulu Langat (Bangi)' ? 'Ulu Langat' : datum.district == 'Hulu Selangor' ? 'Ulu Selangor' : datum.district == 'Batang Padang (Tapah)' ? 'Batang Padang' : datum.district == 'Gombak (Rawang)' ? 'Gombak' : datum.district == 'Kinta (Ipoh)' ? 'Kinta' : datum.district == 'Larut & Matang (Taiping)' ? 'Larut Dan Matang' : datum.district == 'Manjung (Sitiawan)' ? 'Manjung' : datum.district == 'Petaling (Subang Jaya)' ? 'Petaling' : datum.district == 'Seberang Perai Utara (Butterworth)' ? 'Seberang Perai Utara' : datum.district == 'Timur Laut (Georgetown)' ? 'Timur Laut' : datum.district == 'Ledang' ? 'Tangkak' : datum.district == 'Kulaijaya' ? 'Kulai' : datum.district", "as": "pop_lookup_name" },
-            { "filter": { "param": "S_DISTRICT", "empty": false, "fields": ["pop_lookup_name"] } }
+            { "filter": "!S_DISTRICT.pop_lookup_name || datum.pop_lookup_name == S_DISTRICT.pop_lookup_name"}
           ],
           "mark": "bar",
           "encoding": {
@@ -221,18 +233,21 @@
       "comment": "--- FINAL SECTION: NATIONALITY BUTTERFLY ---",
       "width": 1050, "height": 350,
       "title": {
-        "text": { "signal": "S_STATE.state ? '4. Nationality Distribution in ' + S_STATE.state : '4. Nationality Distribution'" },
-        "subtitle": [
-          "Please select a district on the map to visualize.", 
-          "This chart shows the distribution of citizens and non-citizens for the selected district and its state. The selected district is highlighted for easy comparison."
-        ],
+        "text": {
+          "comment": "★修正ポイント：未選択時はSelangorベースラインであることを明記",
+          "signal": "S_STATE.state ? '4. Nationality Distribution in ' + S_STATE.state : '4. Nationality Distribution (Selangor Baseline)'"
+        },
+        "subtitle": {
+          "comment": "★修正ポイント：未選択時と選択時で説明文を動的に切り替える",
+          "signal": "S_STATE.state ? ['Showing the distribution of citizens and non-citizens for districts within ' + S_STATE.state + '.', 'The selected district is highlighted for easy comparison.'] : ['Please select a state or district on the map to visualize its region.', 'Currently displaying Selangor as a baseline for comparison.']"
+        },
         "fontSize": 18, "subtitleFontSize": 13, "subtitleFontStyle": "italic", "anchor": "start", "offset": 15
       },
       "data": { "url": "https://raw.githubusercontent.com/Ark111201/DV2/refs/heads/main/data/population_district_2022_(comparson_citizen_noncitizen).csv" },
       "transform": [
         { "filter": "datum.sex == 'both' && datum.age == 'overall'" },
         { "calculate": "datum.district", "as": "pop_lookup_name" },
-        { "filter": { "param": "S_STATE", "empty": false, "fields": ["state"] } },
+        { "filter": "S_STATE.state ? datum.state == S_STATE.state : datum.state == 'Selangor'" },
         { "calculate": "indexof(['bumi_malay', 'bumi_other', 'chinese', 'indian', 'other_citizen'], datum.ethnicity) != -1 ? 'Malaysian' : 'Foreigner'", "as": "group" },
         { "aggregate": [{"op": "sum", "field": "population", "as": "sum_pop"}], "groupby": ["pop_lookup_name", "group"] },
         { "calculate": "datum.group == 'Malaysian' ? -datum.sum_pop : datum.sum_pop", "as": "pop_butterfly" }
