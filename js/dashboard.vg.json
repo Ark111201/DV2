@@ -23,8 +23,8 @@
         {
           "comment": "--- LEFT SIDE: DISTRICT MAP ---",
           "width": 700,
-          "height": 550,
-          "projection": { "type": "mercator", "center": [99.0, 10.5], "scale": 1920 },
+          "height": 400,
+          "projection": { "type": "mercator", "center": [99.0, 10.5], "scale": 1980 },
           "layer": [
             {
               "data": { "url": "https://raw.githubusercontent.com/Ark111201/DV2/refs/heads/main/maps/malaysia-districts.json", "format": {"type": "topojson", "feature": "gadm41_MYS_2"} },
@@ -74,7 +74,7 @@
         },
         {
           "comment": "--- POPULATION PYRAMID (Tooltip Added) ---",
-          "width": 300, "height": 450,
+          "width": 300, "height": 400,
           "title": { "text": { "signal": "S_DISTRICT.pop_lookup_name ? 'Population in ' + S_DISTRICT.pop_lookup_name : 'All Districts (Malaysia)'" }, "fontSize": 14 },
           "data": { "url": "https://raw.githubusercontent.com/Ark111201/DV2/refs/heads/main/data/population_district_2022.(withgendar)csv.csv" },
           "transform": [
