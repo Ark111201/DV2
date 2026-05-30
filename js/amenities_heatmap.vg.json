@@ -1,0 +1,189 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "bounds": "flush",
+  "title": {
+    "text": "5. Access to Basic Amenities by District in East Malaysia (2022)",
+    "subtitle": [
+      "Heatmap sorted by piped water coverage (ascending) to highlight districts with the most critical infrastructure deficits.",
+      "Red cells indicate dangerously low access — Bukit Mabong (21.6%) and Song (29.8%) in Sarawak are the most underserved districts."
+    ],
+    "fontSize": 18,
+    "subtitleFontSize": 13,
+    "subtitleFontStyle": "italic",
+    "anchor": "start",
+    "offset": 15,
+    "subtitlePadding": 10,
+    "font": "sans-serif",
+    "subtitleFont": "sans-serif"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/Ark111201/DV2/refs/heads/main/data/hh_access_amenities.csv",
+    "format": {"type": "csv"}
+  },
+  "transform": [
+    {
+      "calculate": "datum.piped_water",
+      "as": "sort_by_water"
+    },
+    {
+      "fold": ["piped_water", "electricity"],
+      "as": ["amenity_type", "coverage_rate"]
+    },
+    {
+      "calculate": "datum.amenity_type == 'piped_water' ? 'Piped Water' : 'Electricity'",
+      "as": "amenity_name"
+    }
+  ],
+  "facet": {
+    "column": {
+      "field": "state",
+      "type": "nominal",
+      "header": {
+        "title": "State (East Malaysia)",
+        "labelFontSize": 14,
+        "labelFontWeight": "bold",
+        "labelFont": "sans-serif",
+        "titleFont": "sans-serif",
+        "titleFontSize": 12,
+        "titleColor": "#444"
+      }
+    }
+  },
+  "spacing": 90,
+  "spec": {
+    "width": 420,
+    "height": 550,
+    "layer": [
+      {
+        "mark": {
+          "type": "rect",
+          "stroke": "#ffffff",
+          "strokeWidth": 1
+        },
+        "encoding": {
+          "x": {
+            "field": "amenity_name",
+            "type": "nominal",
+            "title": null,
+            "sort": ["Piped Water", "Electricity"],
+            "axis": {
+              "labelAngle": 0,
+              "labelFont": "sans-serif",
+              "labelFontSize": 11,
+              "labelFontWeight": "bold"
+            }
+          },
+          "y": {
+            "field": "district",
+            "type": "nominal",
+            "title": "District",
+            "sort": {
+              "field": "sort_by_water",
+              "op": "mean",
+              "order": "ascending"
+            },
+            "axis": {
+              "labelFont": "sans-serif",
+              "labelFontSize": 10,
+              "titleFont": "sans-serif",
+              "titleFontSize": 11,
+              "titleFontWeight": "bold"
+            }
+          },
+          "color": {
+            "field": "coverage_rate",
+            "type": "quantitative",
+            "scale": {
+              "domain": [20, 100],
+              "scheme": "redblue"
+            },
+            "legend": {
+              "title": "Coverage Rate (%)",
+              "orient": "right",
+              "labelFont": "sans-serif",
+              "titleFont": "sans-serif",
+              "format": ".1f"
+            }
+          },
+          "tooltip": [
+            {"field": "state", "type": "nominal", "title": "State"},
+            {"field": "district", "type": "nominal", "title": "District"},
+            {"field": "amenity_name", "type": "nominal", "title": "Amenity Type"},
+            {"field": "coverage_rate", "type": "quantitative", "title": "Coverage Rate (%)", "format": ".1f"}
+          ]
+        }
+      },
+      {
+        "transform": [
+          {"filter": "datum.district == 'Bukit Mabong' && datum.amenity_type == 'piped_water'"}
+        ],
+        "mark": {
+          "type": "text",
+          "align": "left",
+          "dx": 5,
+          "dy": 0,
+          "fontSize": 10,
+          "fontWeight": "bold",
+          "color": "#ffffff"
+        },
+        "encoding": {
+          "x": {
+            "field": "amenity_name",
+            "type": "nominal",
+            "sort": ["Piped Water", "Electricity"]
+          },
+          "y": {
+            "field": "district",
+            "type": "nominal",
+            "sort": {
+              "field": "sort_by_water",
+              "op": "mean",
+              "order": "ascending"
+            }
+          },
+          "text": {"value": "21.6%"}
+        }
+      },
+      {
+        "transform": [
+          {"filter": "datum.district == 'Song' && datum.amenity_type == 'piped_water'"}
+        ],
+        "mark": {
+          "type": "text",
+          "align": "left",
+          "dx": 5,
+          "dy": 0,
+          "fontSize": 10,
+          "fontWeight": "bold",
+          "color": "#ffffff"
+        },
+        "encoding": {
+          "x": {
+            "field": "amenity_name",
+            "type": "nominal",
+            "sort": ["Piped Water", "Electricity"]
+          },
+          "y": {
+            "field": "district",
+            "type": "nominal",
+            "sort": {
+              "field": "sort_by_water",
+              "op": "mean",
+              "order": "ascending"
+            }
+          },
+          "text": {"value": "29.8%"}
+        }
+      }
+    ]
+  },
+  "resolve": {
+    "scale": {
+      "y": "independent"
+    }
+  },
+  "config": {
+    "axis": {"grid": false},
+    "view": {"stroke": null}
+  }
+}
