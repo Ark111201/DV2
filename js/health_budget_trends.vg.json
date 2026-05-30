@@ -1,0 +1,264 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "bounds": "flush",
+  "title": {
+    "text": "4. Ministry of Health (MOH) Budget Allocation Trends (2015-2024)",
+    "subtitle": [
+      "Insight: The vast majority of the health budget is consistently consumed by Operating Expenditure (OE), such as salaries and supplies.",
+      "Development Expenditure (DE) for building new hospitals and upgrading infrastructure remains severely limited, explaining the persistent regional bed shortages."
+    ],
+    "fontSize": 18,
+    "subtitleFontSize": 13,
+    "subtitleFontStyle": "italic",
+    "anchor": "start",
+    "offset": 15,
+    "subtitlePadding": 10,
+    "font": "sans-serif",
+    "subtitleFont": "sans-serif"
+  },
+  "width": 1050,
+  "height": 380,
+  "data": {
+    "url": "https://raw.githubusercontent.com/Ark111201/DV2/refs/heads/main/data/budget_allocation_clean.csv",
+    "format": {
+      "type": "csv",
+      "parse": {"date": "date:'%d/%m/%Y'"}
+    }
+  },
+  "transform": [
+    {
+      "calculate": "datum.category == 'de' ? 'Development Expenditure (DE)' : 'Operating Expenditure (OE)'",
+      "as": "expenditure_type"
+    }
+  ],
+  "layer": [
+    {
+      "comment": "--- Layer 1: Stacked area本体（一番下に） ---",
+      "mark": {
+        "type": "area",
+        "opacity": 0.80,
+        "interpolate": "monotone",
+        "line": {"strokeWidth": 2}
+      },
+      "encoding": {
+        "x": {
+          "field": "date",
+          "type": "temporal",
+          "title": "Year",
+          "axis": {
+            "format": "%Y",
+            "grid": false,
+            "labelFont": "sans-serif",
+            "titleFont": "sans-serif",
+            "labelPadding": 6,
+            "tickCount": 10
+          }
+        },
+        "y": {
+          "field": "allocation",
+          "type": "quantitative",
+          "title": "Budget Allocation (RM)",
+          "stack": true,
+          "axis": {
+            "grid": true,
+            "gridOpacity": 0.2,
+            "labelFont": "sans-serif",
+            "titleFont": "sans-serif",
+            "labelExpr": "datum.value == 0 ? 'RM 0' : 'RM ' + (datum.value / 1000000000) + 'B'"
+          }
+        },
+        "color": {
+          "field": "expenditure_type",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Operating Expenditure (OE)", "Development Expenditure (DE)"],
+            "range": ["#2171b5", "#ff7f0e"]
+          },
+          "legend": {
+            "orient": "bottom",
+            "title": null,
+            "direction": "horizontal",
+            "labelFont": "sans-serif",
+            "labelFontSize": 12,
+            "padding": 15,
+            "symbolType": "square",
+            "symbolSize": 150
+          }
+        },
+        "tooltip": [
+          {"field": "date", "type": "temporal", "timeUnit": "year", "title": "Year"},
+          {"field": "expenditure_type", "type": "nominal", "title": "Type"},
+          {"field": "allocation", "type": "quantitative", "title": "Allocation (RM)", "format": ",.0f"}
+        ]
+      }
+    },
+    {
+      "comment": "--- Layer 2: COVID区間 垂直線（2020）青系 ---",
+      "mark": {
+        "type": "rule",
+        "color": "#6baed6",
+        "strokeDash": [5, 4],
+        "strokeWidth": 1.5,
+        "opacity": 0.9
+      },
+      "encoding": {
+        "x": {"datum": {"year": 2020}, "type": "temporal"}
+      }
+    },
+    {
+      "comment": "--- Layer 3: COVID区間 垂直線（2022）青系 ---",
+      "mark": {
+        "type": "rule",
+        "color": "#6baed6",
+        "strokeDash": [5, 4],
+        "strokeWidth": 1.5,
+        "opacity": 0.9
+      },
+      "encoding": {
+        "x": {"datum": {"year": 2022}, "type": "temporal"}
+      }
+    },
+    {
+      "comment": "--- Layer 4: OE横ばい 水平ライン（28B付近） ---",
+      "mark": {
+        "type": "rule",
+        "color": "#333333",
+        "strokeWidth": 1.5,
+        "opacity": 0.85
+      },
+      "encoding": {
+        "x": {"datum": {"year": 2020}, "type": "temporal"},
+        "x2": {"datum": {"year": 2022}, "type": "temporal"},
+        "y": {"datum": 28000000000, "type": "quantitative"}
+      }
+    },
+    {
+      "comment": "--- Layer 5: 左端キャップ ---",
+      "mark": {
+        "type": "rule",
+        "color": "#333333",
+        "strokeWidth": 1.5,
+        "opacity": 0.85
+      },
+      "encoding": {
+        "x": {"datum": {"year": 2020}, "type": "temporal"},
+        "y": {"datum": 27200000000, "type": "quantitative"},
+        "y2": {"datum": 28800000000, "type": "quantitative"}
+      }
+    },
+    {
+      "comment": "--- Layer 6: 右端キャップ ---",
+      "mark": {
+        "type": "rule",
+        "color": "#333333",
+        "strokeWidth": 1.5,
+        "opacity": 0.85
+      },
+      "encoding": {
+        "x": {"datum": {"year": 2022}, "type": "temporal"},
+        "y": {"datum": 27200000000, "type": "quantitative"},
+        "y2": {"datum": 28800000000, "type": "quantitative"}
+      }
+    },
+    {
+      "comment": "--- Layer 7: OE横ばいラベル ---",
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "dy": -12,
+        "fontSize": 11,
+        "fontStyle": "italic",
+        "color": "#333333"
+      },
+      "encoding": {
+        "x": {"datum": {"year": 2021}, "type": "temporal"},
+        "y": {"datum": 28000000000, "type": "quantitative"},
+        "text": {"value": "OE stagnant: +0.3% (2020–2022)"}
+      }
+    },
+    {
+      "comment": "--- Layer 8: Post-COVID surge 垂直線（2022）緑 ---",
+      "mark": {
+        "type": "rule",
+        "color": "#2ca02c",
+        "strokeDash": [5, 4],
+        "strokeWidth": 1.5,
+        "opacity": 0.75
+      },
+      "encoding": {
+        "x": {"datum": {"year": 2022}, "type": "temporal"}
+      }
+    },
+    {
+      "comment": "--- Layer 9: Post-COVID surge 垂直線（2024）緑 ---",
+      "mark": {
+        "type": "rule",
+        "color": "#2ca02c",
+        "strokeDash": [5, 4],
+        "strokeWidth": 1.5,
+        "opacity": 0.75
+      },
+      "encoding": {
+        "x": {"datum": {"year": 2024}, "type": "temporal"}
+      }
+    },
+    {
+      "comment": "--- Layer 10: Post-COVID surgeラベル ---",
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "dy": -165,
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#333333"
+      },
+      "encoding": {
+        "x": {"datum": {"year": 2023}, "type": "temporal"},
+        "text": {"value": "Post-COVID surge"}
+      }
+    },
+    {
+      "comment": "--- Layer 11: Post-COVID surge 上昇率サブラベル ---",
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "dy": -150,
+        "fontSize": 10.5,
+        "fontStyle": "italic",
+        "color": "#333333"
+      },
+      "encoding": {
+        "x": {"datum": {"year": 2023}, "type": "temporal"},
+        "text": {"value": "Total +27.2% in 2 years"}
+      }
+    },
+    {
+      "comment": "--- Layer 12: 2024合計ラベル ---",
+      "transform": [
+        {"filter": "year(datum.date) == 2024"},
+        {
+          "aggregate": [{"op": "sum", "field": "allocation", "as": "total"}],
+          "groupby": ["date"]
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": -6,
+        "dy": -10,
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "#333333"
+      },
+      "encoding": {
+        "x": {"field": "date", "type": "temporal"},
+        "y": {"field": "total", "type": "quantitative"},
+        "text": {"value": "RM 41.2B"}
+      }
+    }
+  ],
+  "config": {
+    "axis": {"grid": false},
+    "view": {"stroke": null}
+  }
+}
