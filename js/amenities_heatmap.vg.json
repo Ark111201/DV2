@@ -2,13 +2,13 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "bounds": "flush",
   "title": {
-    "text": "5. Access to Basic Amenities by District in East Malaysia (2022)",
+    "text": "Access to Basic Amenities by District in East Malaysia (2022)",
     "subtitle": [
-      "Heatmap sorted by piped water coverage (ascending) to highlight districts with the most critical infrastructure deficits.",
-      "Red cells indicate dangerously low access — Bukit Mabong (21.6%) and Song (29.8%) in Sarawak are the most underserved districts."
+      "This heatmap shows household access rates (%) for Piped Water and Electricity across districts in Sabah and Sarawak.",
+      "Red cells indicate dangerously low access rates."
     ],
-    "fontSize": 18,
-    "subtitleFontSize": 13,
+    "fontSize": 25,
+    "subtitleFontSize": 16,
     "subtitleFontStyle": "italic",
     "anchor": "start",
     "offset": 15,

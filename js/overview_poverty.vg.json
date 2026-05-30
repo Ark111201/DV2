@@ -1,12 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {
-    "text": "Historical Poverty Reduction Trends by Region (1970-2022)",
-    "fontSize": 20,
-    "anchor": "start",
-    "font": "sans-serif",
-    "subtitle": "Grouped by geographical regions with a single consolidated legend for cleaner layout."
-  },
+  
   "data": {
     "url": "https://raw.githubusercontent.com/Ark111201/DV2/refs/heads/main/data/hh_poverty_state(with_poverty_absolute).csv",
     "format": { "type": "csv", "parse": {"date": "date:'%d/%m/%Y'"} }
@@ -24,7 +18,7 @@
     "title": null
   },
   "spec": {
-    "width": 280,
+    "width": 270,
     "height": 220,
     "layer": [
       {

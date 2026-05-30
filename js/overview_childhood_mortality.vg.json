@@ -2,16 +2,16 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "bounds": "flush",
   "title": {
-    "text": "3. Early Childhood Mortality Rate by Region & Type (2023)",
+    "text": "Early Childhood Mortality Rate by Region & Type (2023)",
     "subtitle": [
-      "The population pyramid displays the age and gender distribution for the specific district selected on the map.",
       "This multi-panel chart shows the breakdown of early childhood mortality rates across major geographic regions."
     ],
-    "fontSize": 18,
-    "subtitleFontSize": 13,
+    "fontSize": 25,
+    "subtitleFontSize": 16,
     "subtitleFontStyle": "italic",
     "anchor": "start",
     "offset": 15,
+    "subtitlePadding": 15,
     "font": "sans-serif",
     "subtitleFont": "sans-serif"
   },
@@ -40,52 +40,84 @@
   },
   "columns": 4,
   "spec": {
-    "width": 180,
-    "height": 250,
-    "mark": {
-      "type": "bar",
-      "tooltip": true
-    },
-    "encoding": {
-      "x": {
-        "field": "type",
-        "type": "nominal",
-        "sort": ["perinatal", "neonatal", "infant", "toddler"],
-        "title": null,
-        "axis": {
-          "labelAngle": -45,
-          "labelFont": "sans-serif",
-          "labelFontSize": 11
+    "width": 240,
+    "height": 280,
+    "layer": [
+      {
+        "mark": {"type": "bar", "tooltip": true},
+        "encoding": {
+          "x": {
+            "field": "type",
+            "type": "nominal",
+            "sort": ["perinatal", "neonatal", "infant", "toddler"],
+            "title": null,
+            "axis": {
+              "labelAngle": -45,
+              "labelFont": "sans-serif",
+              "labelFontSize": 11
+            }
+          },
+          "y": {
+            "field": "mean_rate",
+            "type": "quantitative",
+            "title": "Mean Mortality Rate (per 1,000)",
+            "axis": {
+              "labelFont": "sans-serif",
+              "titleFont": "sans-serif",
+              "titleFontSize": 11
+            }
+          },
+          "color": {
+            "field": "type",
+            "type": "nominal",
+            "scale": {
+              "domain": ["perinatal", "neonatal", "infant", "toddler"],
+              "range": ["#1b6ca8", "#3a9e8f", "#d4a843", "#8b7355"]
+            },
+            "legend": {
+              "orient": "bottom",
+              "title": null,
+              "direction": "horizontal",
+              "labelFont": "sans-serif",
+              "labelFontSize": 11,
+              "labelLimit": 200
+            }
+          },
+          "tooltip": [
+            {"field": "region", "type": "nominal", "title": "Region"},
+            {"field": "type", "type": "nominal", "title": "Mortality Type"},
+            {"field": "mean_rate", "type": "quantitative", "title": "Mean Rate", "format": ".2f"}
+          ]
         }
       },
-      "y": {
-        "field": "mean_rate",
-        "type": "quantitative",
-        "title": "Mean Mortality Rate (per 1,000)",
-        "axis": {
-          "labelFont": "sans-serif",
-          "titleFont": "sans-serif",
-          "titleFontSize": 11
+      {
+        "transform": [],
+        "mark": {
+          "type": "text",
+          "align": "center",
+          "dy": -8,
+          "fontSize": 10,
+          "fontWeight": "bold",
+          "color": "#333333"
+        },
+        "encoding": {
+          "x": {
+            "field": "type",
+            "type": "nominal",
+            "sort": ["perinatal", "neonatal", "infant", "toddler"]
+          },
+          "y": {
+            "field": "mean_rate",
+            "type": "quantitative"
+          },
+          "text": {
+            "field": "mean_rate",
+            "type": "quantitative",
+            "format": ".1f"
+          }
         }
-      },
-      "color": {
-        "field": "type",
-        "type": "nominal",
-        "scale": {"scheme": "tableau10"},
-        "legend": {
-          "orient": "bottom",
-          "title": null,
-          "direction": "horizontal",
-          "labelFont": "sans-serif",
-          "labelFontSize": 11
-        }
-      },
-      "tooltip": [
-        {"field": "region", "type": "nominal", "title": "Region"},
-        {"field": "type", "type": "nominal", "title": "Mortality Type"},
-        {"field": "mean_rate", "type": "quantitative", "title": "Mean Rate", "format": ".2f"}
-      ]
-    }
+      }
+    ]
   },
   "resolve": {
     "scale": {"color": "shared", "y": "shared"},

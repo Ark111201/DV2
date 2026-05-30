@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "Malaysia Healthcare Accessibility & Socio-Economic Dashboard (2022)",
-    "fontSize": 20,
+    "fontSize": 25,
     "anchor": "start",
     "font": "sans-serif",
     "offset": 40
@@ -17,7 +17,7 @@
           "Red areas indicate zero hospital beds per 10,000 people, meaning these districts have no hospitals with inpatient bed facilities.",
           "The population pyramid displays the age and gender distribution for the specific district selected on the map."
         ],
-        "fontSize": 18, "subtitleFontSize": 13, "subtitleFontStyle": "italic", "anchor": "start", "offset": 15
+        "fontSize": 22, "subtitleFontSize": 15, "subtitleFontStyle": "italic", "anchor": "start", "offset": 15
       },
       "hconcat": [
         {
@@ -109,14 +109,12 @@
       "comment": "--- MIDDLE SECTION: INCOME LOLLIPOP (UPDATED) ---",
       "title": {
         "text": {
-          "comment": "★修正ポイント：未選択時はSelangorがベースラインとして表示されていることを明記",
           "signal": "S_STATE.state ? '2. Income Comparison in ' + S_STATE.state : '2. Income Comparison (Selangor Baseline)'"
         },
         "subtitle": {
-          "comment": "★修正ポイント：未選択時と選択時で説明文を完全に切り替える",
-          "signal": "S_STATE.state ? ['Showing household incomes for districts within ' + S_STATE.state + '.', 'The selected district is highlighted in red, with the national average being RM 8,479.'] : ['Please select a state or district on the map to visualize its region.', 'Currently displaying Selangor as a baseline for comparison. National average is RM 8,479.']"
+          "signal": "S_STATE.state ? ['Showing household incomes for districts within ' + S_STATE.state + '.', 'The selected district is highlighted in red, with the national average being RM 8,479.'] : ['▶  PLEASE select a state or district on the map to visualize its region.', 'Currently displaying Selangor as a baseline for comparison. National average is RM 8,479.']"
         },
-        "fontSize": 18, "subtitleFontSize": 13, "subtitleFontStyle": "italic", "anchor": "start", "offset": 15
+        "fontSize": 22, "subtitleFontSize": 15, "subtitleFontStyle": "italic", "anchor": "start", "offset": 15
       },
       "width": 1050, "height": 350,
       "data": { "url": "https://raw.githubusercontent.com/Ark111201/DV2/refs/heads/main/data/hh_income_district(2022).csv" },
@@ -125,7 +123,6 @@
         { "calculate": "datum.district", "as": "pop_lookup_name" },
         { "filter": "datum.state != 'Malaysia'" },
         { 
-          "comment": "地図で未選択ならSelangorを、選択されていればその州をフィルターするロジック",
           "filter": "S_STATE.state ? datum.state == S_STATE.state : datum.state == 'Selangor'" 
         }
       ],
@@ -170,11 +167,11 @@
         "text": "3. Poverty Correlation & Hospital Infrastructure Detail",
         "dx": -60,
         "subtitle": [
-          "Please select a district on the map to visualize.", 
+          "▶  PLEASE select a state or district on the map to visualize its region.", 
           "This section visualizes the correlation between poverty rates and healthcare infrastructure, highlighting the selected district in red. ",
           "It also shows the breakdown of beds across public, private, and special medical institutions."
         ],
-        "fontSize": 18, "subtitleFontSize": 13, "subtitleFontStyle": "italic", "anchor": "start", "offset": 15
+        "fontSize": 22, "subtitleFontSize": 15, "subtitleFontStyle": "italic", "anchor": "start", "offset": 15
       },
       "hconcat": [
         {
@@ -208,7 +205,6 @@
           "comment": "--- STACKED BAR: HOSPITAL TYPE DETAIL ---",
           "width": 350, "height": 400, "title": {
           "text": {
-            "comment": "★修正ポイント：未選択時はマレーシア全土(Total)の表記に動的に切り替える",
             "signal": "S_DISTRICT.pop_lookup_name ? 'Hospital Types in ' + S_DISTRICT.pop_lookup_name : 'Hospital Types Across Malaysia (Total)'"
           }
   },
@@ -225,7 +221,7 @@
                "type": "nominal", 
                "scale": { 
                 "domain": ["hospital_moh", "hospital_non_moh", "special_medical_institution"],
-                "range": ["#1f77b4", "#ff7f0e", "#7f7f7f"]}, 
+                "range": ["#2c5d63", "#a288a6", "#8d99ae"]}, 
               "legend": { "orient": "none", "title": "Hospital Type", "direction": "horizontal", "legendX": 630, "legendY": 450} 
               },
             "tooltip": [ { "field": "type", "type": "nominal", "title": "Hospital Type" }, { "field": "beds", "aggregate": "sum", "type": "quantitative", "title": "Total Beds", "format": ",d" } ]
@@ -238,14 +234,12 @@
       "width": 1050, "height": 350,
       "title": {
         "text": {
-          "comment": "★修正ポイント：未選択時はSelangorベースラインであることを明記",
           "signal": "S_STATE.state ? '4. Nationality Distribution in ' + S_STATE.state : '4. Nationality Distribution (Selangor Baseline)'"
         },
         "subtitle": {
-          "comment": "★修正ポイント：未選択時と選択時で説明文を動的に切り替える",
-          "signal": "S_STATE.state ? ['Showing the distribution of citizens and non-citizens for districts within ' + S_STATE.state + '.', 'The selected district is highlighted for easy comparison.'] : ['Please select a state or district on the map to visualize its region.', 'Currently displaying Selangor as a baseline for comparison.']"
+          "signal": "S_STATE.state ? ['Showing the distribution of citizens and non-citizens for districts within ' + S_STATE.state + '.', 'The selected district is highlighted for easy comparison.'] : ['▶ PLEASE select a state or district on the map to visualize its region.', 'Currently displaying Selangor as a baseline for comparison.']"
         },
-        "fontSize": 18, "subtitleFontSize": 13, "subtitleFontStyle": "italic", "anchor": "start", "offset": 15
+        "fontSize": 25, "subtitleFontSize": 16, "subtitleFontStyle": "italic", "anchor": "start", "offset": 15
       },
       "data": { "url": "https://raw.githubusercontent.com/Ark111201/DV2/refs/heads/main/data/population_district_2022_(comparson_citizen_noncitizen).csv" },
       "transform": [

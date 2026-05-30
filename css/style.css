@@ -1,54 +1,167 @@
+/* --- Global Styles & Base --- */
 body {
-  background-color: #827360;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  color: #333;
+  background-color: #2c302e; /* Deep sophisticated dark slate background */
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  color: #2b2b2b;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
 }
 
+/* Page Container - Fixed layout suitable for FIT2179 studio marking */
 .page {
   width: 1350px;
-  margin: 40px auto;
-  background-color: #aea599;
-  padding: 40px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  border-radius: 8px;
+  margin: 50px auto;
+  background-color: #f7f5f0; /* Warm, soft canvas tone (elegant museum feel) */
+  padding: 50px 60px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
 }
 
+/* --- Header Section --- */
 .header {
   text-align: center;
-  margin-bottom: 40px;
-  border-bottom: 2px solid #eee;
-  padding-bottom: 20px;
+  margin-bottom: 50px;
+  border-bottom: 2px solid #e0dbcf;
+  padding-bottom: 35px;
 }
 
 h1 {
-  font-family: 'Montserrat', sans-serif; 
-  font-weight: 800;                     
-  letter-spacing: -0.5px;               
-  color: #08306b;                       
-  text-transform: uppercase;
+  font-family: 'Inter', sans-serif; 
+  font-weight: 700;                     
+  letter-spacing: -1px;               
+  color: #0f2c59; /* Regal Navy accent */
+  font-size: 60px;
+  margin-top: 0;
+  margin-bottom: 15px;
 }
-h2 { color: #0f314e; border-left: 5px solid #2171b5; padding-left: 15px; margin-top: 40px; }
 
+.serif-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  text-transform: none;
+  color: #4f6f52; /* Subdued sage green accent */
+}
+
+.lead-text {
+  font-size: 18px;
+  line-height: 1.65;
+  color: #555;
+  max-width: 950px;
+  margin: 0 auto;
+  font-weight: 300;
+}
+
+/* --- Typography & Sections --- */
+h2 { 
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  color: #0f2c59; 
+  border-left: 5px solid #4f6f52; 
+  padding-left: 15px; 
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.section {
+  background-color: #ffffff;
+  padding: 35px;
+  margin-bottom: 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+.section-desc {
+  font-size: 18px;
+  color: #666;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.sub-section-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0f2c59;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.sub-section-title.centered {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+
+/* --- Visualisation Containers --- */
 .vis-container {
   width: 100%;
-  margin: 20px 0;
+  background-color: #ffffff;
+  padding: 10px 0;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
+/* --- PureCSS Grid Spacing Adjustments --- */
+.row-spacing {
+  margin-bottom: 30px;
+}
+
+.padding-right {
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+.padding-left {
+  padding-left: 20px;
+  box-sizing: border-box;
+}
+
+.direct-top-border {
+  border-top: 1px dashed #e0dbcf;
+  padding-top: 25px;
+  margin-top: 15px;
+}
+
+/* --- Insights Box (Callouts) --- */
 .insights {
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 5px;
-  font-size: 14px;
+  background-color: #f4f6f4; /* Subtle hint of sage green for positive read */
+  padding: 20px 25px;
+  border-radius: 6px;
   line-height: 1.6;
-  border-left: 5px solid #ccc;
-  margin-top: 10px;
+  border-left: 4px solid #4f6f52;
+  margin-top: 20px;
 }
 
+.insights.compact {
+  margin-top: 15px;
+  padding: 15px 20px;
+}
+
+.insights h5 {
+  margin: 0 0 6px 0;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #4f6f52;
+  font-weight: 700;
+}
+
+.insights p {
+  margin: 0;
+  font-size: 16px;
+  color: #444;
+}
+
+/* --- Footer --- */
 .footer {
-  margin-top: 60px;
-  font-size: 20px;
+  margin-top: 50px;
+  border-top: 1px solid #e0dbcf;
+  padding-top: 25px;
+  font-size: 16px;
   text-align: center;
-  color: #f1efef;
+  color: #777;
 }

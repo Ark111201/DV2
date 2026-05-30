@@ -2,17 +2,17 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "bounds": "flush",
   "title": {
-    "text": "4. Ministry of Health (MOH) Budget Allocation Trends (2015-2024)",
+    "text": "Ministry of Health (MOH) Budget Allocation Trends (2015-2024)",
     "subtitle": [
-      "Insight: The vast majority of the health budget is consistently consumed by Operating Expenditure (OE), such as salaries and supplies.",
-      "Development Expenditure (DE) for building new hospitals and upgrading infrastructure remains severely limited, explaining the persistent regional bed shortages."
+      "Stacked area chart showing the total MOH budget split into Operating Expenditure (OE) and Development Expenditure (DE) from 2015 to 2024.",
+  "   OE covers recurring costs such as salaries and supplies; DE covers capital investment in hospitals and infrastructure."
     ],
-    "fontSize": 18,
-    "subtitleFontSize": 13,
+    "fontSize": 25,
+    "subtitleFontSize": 16,
     "subtitleFontStyle": "italic",
     "anchor": "start",
     "offset": 15,
-    "subtitlePadding": 10,
+    "subtitlePadding": 15,
     "font": "sans-serif",
     "subtitleFont": "sans-serif"
   },
@@ -33,7 +33,6 @@
   ],
   "layer": [
     {
-      "comment": "--- Layer 1: Stacked area本体（一番下に） ---",
       "mark": {
         "type": "area",
         "opacity": 0.80,
@@ -72,7 +71,7 @@
           "type": "nominal",
           "scale": {
             "domain": ["Operating Expenditure (OE)", "Development Expenditure (DE)"],
-            "range": ["#2171b5", "#ff7f0e"]
+            "range": ["#3d7a6b", "#c9972a"]
           },
           "legend": {
             "orient": "bottom",
@@ -82,7 +81,8 @@
             "labelFontSize": 12,
             "padding": 15,
             "symbolType": "square",
-            "symbolSize": 150
+            "symbolSize": 150,
+            "labelLimit": 300
           }
         },
         "tooltip": [
@@ -93,33 +93,42 @@
       }
     },
     {
-      "comment": "--- Layer 2: COVID区間 垂直線（2020）青系 ---",
       "mark": {
         "type": "rule",
-        "color": "#6baed6",
+        "color": "#333333",
         "strokeDash": [5, 4],
         "strokeWidth": 1.5,
-        "opacity": 0.9
+        "opacity": 0.7
       },
       "encoding": {
         "x": {"datum": {"year": 2020}, "type": "temporal"}
       }
     },
     {
-      "comment": "--- Layer 3: COVID区間 垂直線（2022）青系 ---",
       "mark": {
         "type": "rule",
-        "color": "#6baed6",
+        "color": "#333333",
         "strokeDash": [5, 4],
         "strokeWidth": 1.5,
-        "opacity": 0.9
+        "opacity": 0.7
       },
       "encoding": {
         "x": {"datum": {"year": 2022}, "type": "temporal"}
       }
     },
     {
-      "comment": "--- Layer 4: OE横ばい 水平ライン（28B付近） ---",
+      "mark": {
+        "type": "rule",
+        "color": "#333333",
+        "strokeDash": [5, 4],
+        "strokeWidth": 1.5,
+        "opacity": 0.7
+      },
+      "encoding": {
+        "x": {"datum": {"year": 2024}, "type": "temporal"}
+      }
+    },
+    {
       "mark": {
         "type": "rule",
         "color": "#333333",
@@ -133,7 +142,6 @@
       }
     },
     {
-      "comment": "--- Layer 5: 左端キャップ ---",
       "mark": {
         "type": "rule",
         "color": "#333333",
@@ -147,7 +155,6 @@
       }
     },
     {
-      "comment": "--- Layer 6: 右端キャップ ---",
       "mark": {
         "type": "rule",
         "color": "#333333",
@@ -161,13 +168,13 @@
       }
     },
     {
-      "comment": "--- Layer 7: OE横ばいラベル ---",
       "mark": {
         "type": "text",
         "align": "center",
         "dy": -12,
         "fontSize": 11,
         "fontStyle": "italic",
+        "fontWeight": "bold",
         "color": "#333333"
       },
       "encoding": {
@@ -177,33 +184,6 @@
       }
     },
     {
-      "comment": "--- Layer 8: Post-COVID surge 垂直線（2022）緑 ---",
-      "mark": {
-        "type": "rule",
-        "color": "#2ca02c",
-        "strokeDash": [5, 4],
-        "strokeWidth": 1.5,
-        "opacity": 0.75
-      },
-      "encoding": {
-        "x": {"datum": {"year": 2022}, "type": "temporal"}
-      }
-    },
-    {
-      "comment": "--- Layer 9: Post-COVID surge 垂直線（2024）緑 ---",
-      "mark": {
-        "type": "rule",
-        "color": "#2ca02c",
-        "strokeDash": [5, 4],
-        "strokeWidth": 1.5,
-        "opacity": 0.75
-      },
-      "encoding": {
-        "x": {"datum": {"year": 2024}, "type": "temporal"}
-      }
-    },
-    {
-      "comment": "--- Layer 10: Post-COVID surgeラベル ---",
       "mark": {
         "type": "text",
         "align": "center",
@@ -218,12 +198,11 @@
       }
     },
     {
-      "comment": "--- Layer 11: Post-COVID surge 上昇率サブラベル ---",
       "mark": {
         "type": "text",
         "align": "center",
         "dy": -150,
-        "fontSize": 10.5,
+        "fontSize": 11,
         "fontStyle": "italic",
         "color": "#333333"
       },
@@ -233,7 +212,6 @@
       }
     },
     {
-      "comment": "--- Layer 12: 2024合計ラベル ---",
       "transform": [
         {"filter": "year(datum.date) == 2024"},
         {
