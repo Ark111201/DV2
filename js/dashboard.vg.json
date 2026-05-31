@@ -54,9 +54,9 @@
                   "field": "beds_per_10k", "type": "quantitative",
                   "scale": { "type": "threshold", "domain": [0.1, 5, 10, 20, 30, 40], "range": ["#b7282d", "#deebf7", "#9ecae1", "#4292c6", "#2171b5", "#084594", "#08306b"] },
                   "legend": {
-                    "title": "Beds / 10k People",
+                    "title": "Number of beds / 10k People",
                     "values": [0, 0.1, 5, 10, 20, 30, 40],
-                    "labelExpr": "datum.value == 0 ? 'No Hospital' : datum.value == 0.1 ? '0.1 - 5.0' : datum.value",
+                    "labelExpr": "datum.value == 0 ? 'No Hospital' : datum.value == 0.1 ? '0.1' : datum.value",
                     "format": ".1f",
                     "orient": "none",
                     "legendX": 620,
